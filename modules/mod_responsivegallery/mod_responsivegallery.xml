@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5" client="site" method="upgrade">
+<name>Responsive Photo Gallery</name>
+<creationDate>May 2012</creationDate>
+<version>2.7.0</version>
+<author>GraphicAholic</author>
+<copyright>Copyright 2012 - graphicaholic.com</copyright>
+<license>http://www.gnu.org/copyleft/lgpl.html</license>
+<authorEmail>support@graphicaholic.com</authorEmail>
+<authorUrl>http://www.graphicaholic.com/demos</authorUrl>
+	<description><![CDATA[<img src="../modules/mod_responsivegallery/images/ResponsivePhotoGallery.jpg" alt="Responsive Photo Gallery" /><p><strong>Responsive Photo Gallery (c) 2012</strong> is a GPL Joomla! module from <strong><a href="http://www.graphicaholic.com" target="_blank" >GraphicAholic</a></strong></p><p>Responsive Photo Gallery is a full featured and easy to use 'responsive' photo gallery for Joomla 3.x.</p><p><strong><u>USAGE</u> :</strong> <p>"Photos from a Joomla Folder"<br />Your first step is to make a new folder inside your Joomla '/images' directory and upload your photos into this newly created directory. Now, adjust the module options on the left to your needs, select your module position, publish the module, assign it to your menus, save and DONE!</p><p>"Photos from a Flickr Photoset"<br />Click onto the 'Photos from a Flickr Photosets' frame to the right, add your Flickr API, the Photoset ID# you wish to render and select the thumbnail size you wish to use in the carousel. Select your module position, publish the module, assign it to your menus, save and DONE!</p><p>The power is in the code... With only a few options to set, you'll have your very own Responsive Photo Gallery up and running in no time.</p><p>Like all extensions, there are a few key rules to follow.</p><ol><li>If your using more then one Responsive Photo Gallery on a single page you'll need to assign each one with a unique 'Gallery Number' (Ranges are 1 to 50).</li><li>If your using more then one Responsive Photo Gallery on a single page, they must all use the same 'Carousel Position'.</li></ol><li><u>PLEASE NOTE</u>: If you do not follow the three basic rules above, Responsive Photo Gallery will not work.</li><li>Supported Browsers: IE8+, FireFox, Safari, Chrome, Smartphone & Touch Pad browsers.</li><li><strong>Change Log:</strong></li><li>Version 2.7.0: Added Max Height & Width settings to control size of gallery regardless of original photo size. Added the responsive Fancybox2 Lightbox feature to the main gallery photo. Re-coded the 'Auto Play' scrolling code and added 'Play' & 'Pause' icons when 'Auto Play' is being used.</li><li>Version 2.6.2: Minor bug fixes. Upgrade recommended.</li><li>Version 2.6.0: Added auto photo scrolling and timer feature. Added show/hide Joomla or Flickr titles.</li><li>Version 2.5.0: Bug fixes for servers using PHP 5.4.+.</li><li>Version 2.4.0a: Coded for Joomla 3.x, Cleaned up code & minor bug fixes.</li><li>Version 2.2.0: Added additional Flickr options and added an option that fixes the loadposition tag issue.</li><li>Version 2.1.0: Added Flickr Photoset integration</li><li>Version 2.0.0: Initial Release</li></p><p>For additional documentations and useful tips, head over to <a href="http://www.graphicaholic.com" target="_blank" >GraphicAholic's</a> website.</p><p>Responsive Photo Gallery is based on Mary Lou's Responsive Image Gallery over at <a href="http://tympanus.net/codrops/2011/09/20/responsive-image-gallery/" target="_blank" >Codrops</a>.</p>]]>
+	</description>
+	<files>
+		<filename module="mod_responsivegallery">mod_responsivegallery.php</filename>
+        <folder>js</folder>
+        <folder>css</folder>
+        <folder>images</folder>
+        <folder>elements</folder>
+        <folder>tmpl</folder>
+		<filename>class.rgThumbnail.php</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_responsivegallery.xml</filename>
+	</files>
+	<params addpath="">
+		</params>
+	<config>    
+	<fields name="params" addfieldpath="/modules/mod_responsivegallery/elements">
+	<!-- General Settings -->
+	<fieldset name="general" group="general" label="General Settings">
+	<field name="load_jquery" type="radio" default="0" label="Load jQuery?" description="Load the jQuery Library Script?">	
+			<option value="0">No</option>	
+			<option value="1">Yes</option>
+	</field>
+	<field name="imageFeed" type="list" default="0" label="Render Photos from" description="Select how to render photos. If you select 'from Joomla Folder', FTP upload your photos to a folder within your 'images' directory and adjust options in the 'Render photos from a Joomla Folder' frame. If you select 'from Flickr Photoset', adjust options in the 'Render photos from a Flickr Photoset' frame.">
+			<option value="0">a Joomla Folder</option>	
+			<option value="1">a Flickr Photoset</option>
+	</field>
+	<field name="galleryNumber" type="text" default="1" label="Gallery Number" description="If you place more then one Responsive Photo Gallery on a page, make this setting unique to the other modules. You do not need to adjust this setting if only one Responsive Photo Gallery is on a page. You can have up to 50 Responsive Photo Galleries per single page." />
+	<field name="containerMargin" type="text" default="0px" label="Top Margin" description="If you are using this module via the Joomla 'loadposition' tag you may need to add additional top margin spacing. Adding a pixel value here will push RPG downward." />
+	<field name="filteringspacer00" type="spacer" hr="true" />
+	<field name="info1" type="info" default="The settings below are 'Global' to a page. If you are going to have two or more galleries on the same page, each gallery MUST have the same setting below. This does not effect a single gallery on a single page." />
+
+	<field name="styles" type="list" default="1" label="Theme" description="Select what theme you wish to use.">
+			<option value="1">Dark Style</option>	
+			<option value="2">Light Style</option>
+	</field>
+	<field name="thumbPosition" type="list" default="1" label="Carousel / Lightbox option" description="Select if you want the Carousel thumbsnails to be positioned above or below your main photo.">
+			<option value="1">Thumbnails above with Lightbox effect</option>	
+			<option value="2">Thumbnails below with Lightbox effect</option>
+			<option value="3">Thumbnails above without Lightbox effect</option>
+			<option value="4">Thumbnails below without Lightbox effect</option>
+	</field>
+	<field name="autoPlay" type="list" default="1" label="Auto scroll gallery?" description="Select if you want to Auto Scroll through your photos.">
+			<option value="1">No</option>	
+			<option value="2">Yes</option>
+	</field>
+	<field name="infiniteLoop" type="text" default="3000" label="Scrolling speed" description="Scrolling speed in milliseconds." />
+	<field name="maxHeight" type="text" default="" label="Main image max height" description="Use a pixel value to restrict the main photo container's overall height (EXAMPLE: 100px). Leave blank for auto." />
+	<field name="maxWidth" type="text" default="" label="Main image max width" description="Use a pixel value to restrict the main photo container's overall width (EXAMPLE: 100px). Leave blank for auto." />
+	</fieldset>
+	<fieldset name="localhosting" group="localhosting" label="Render photos from a Joomla folder">
+	<field name="path" type="foldertree" default="" directory="images" filter="" label="Photo directory" description="Select a image directory" />
+	<field name="showJtitle" type="list" default="2" label="Display title?" description="Select if you want to display photo titles.">
+			<option value="1">No</option>	
+			<option value="2">Yes</option>
+	</field>
+	<field name="filteringspacer01" type="spacer" hr="true" />
+	<field name="thumbwidth" type="text" default="64px" label="Thumbnail Width" description="Width of thumbnail within the carousel." />
+	<field name="thumbheight" type="text" default="44px" label="Thumbnail Height" description="Height of thumbnail within the carousel." />
+	<field name="thumbratio" type="radio" default="0" label="Keep thumbnail ratio?" description="Keep thumbnail ratio to original image within the carousel?">
+			<option value="0">No</option>
+			<option value="1">yes</option>
+	</field>
+	</fieldset>
+	<fieldset name="flickrhosting" group="flickrhosting" label="Render Photos from a Flickr Photosets">
+	<field name="flickrAPI" type="text" default="6cb7449543a9595800bc0c365223a4e8" label="Flickr API" description="Required setting. I have provided a working Flickr API with this release of RPG. I make no guarantee that it will work forever! It's easy, FREE and advisable to obtain your own Flickr API." />
+	<field name="flickrSet" type="text" default="" label="Flickr Photoset ID#" description="Required setting. This ID# should be the last set of numbers in your Flickr Photoset URL (17 numbers)." />
+	<field name="flickrNumber" type="text" default="10" label="Number of photos to show" description="Number of photos to show from your Flickr photoset." />
+	<field name="flickrThumb" type="list" default="1" label="Flickr Thumbnail Size" description="Select the Flickr thumbnail size you wish to use in the carousel.">
+			<option value="1">Small 75x75 Pixel Square</option>	
+			<option value="2">Small 84x84 Pixel Square</option>
+			<option value="3">Small Thumbnail Ratio</option>
+	</field>
+	<field name="flickrCaption" type="list" default="2" label="Main Photo Caption" description="Select what caption data you wish to display below your main photo.">
+			<option value="1">Flickr Title Only?</option>	
+			<option value="2">Flickr Description Only?</option>
+			<option value="3">Both Flickr Title - Description?</option>
+			<option value="4">None</option>
+	</field>
+	<field name="filteringspacer01" type="spacer" hr="true" />
+	<field name="flickr" type="info" default="Optional Flickr Settings. Set the options below ONLY if you want to show a PRIVATE PHOTOSET from your Flickr account." />
+	<field name="flickrPrivate" type="list" default="0" label="Access Private Photoset" description="Access Private Photoset">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+	</field>
+	<field name="flickrSecret" type="text" default="" label="Flickr Secret Code" description="Flickr Secret Code." />
+	<field name="flickrToken" type="text" default="" label="Flickr Token Code" description="Flickr Token Code." />
+	</fieldset>
+	<fieldset name="advanced" group="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field
+					name="cache"
+					type="list"
+					default="0"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+
+</fieldset>
+</fields>
+</config>
+</extension>
