@@ -1,6 +1,6 @@
 jQuery(document).ready(function() {
 
-	if( jQuery('#ggl-map').length > 0 ){
+	//if( jQuery('#ggl-map').length > 0 ){
 	//google map api
 		var map;
 
@@ -17,7 +17,7 @@ jQuery(document).ready(function() {
 		google.maps.event.addDomListener(window, 'load', initialize);
 		
 
-	}
+	//}
 
 
 	

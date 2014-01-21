@@ -27,7 +27,8 @@ require(YOURBASEPATH . DS . "rt_styleloader.php");
 	<?php
 	require(YOURBASEPATH . DS . "rt_utils.php");
 
-	?>
+	?> 
+	<link rel="stylesheet" href="/templates/rt_afterburner/css/extra.css">
 	<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/rt_afterburner/css/<?php echo $tstyle ?>.css" type="text/css" />
 <!--[if lte IE 6]>
 <script type="text/javascript" src="<?php echo $this->baseurl ?>/templates/rt_afterburner/js/ie_suckerfish.js"></script>
@@ -127,7 +128,7 @@ require(YOURBASEPATH . DS . "rt_styleloader.php");
 <jdoc:include type="modules" name="debug" style="none" />
 </div>
 </div>
-<script src="/templates/rt_afterburner/js/vendor/jquery-1.10.2.min.js"></script>
+<script src="/templates/rt_afterburner/js/jquery-1.10.2.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
 <script src="/templates/rt_afterburner/js/main.js"></script>
 </body>
