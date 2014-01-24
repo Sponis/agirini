@@ -42,6 +42,7 @@ require(YOURBASEPATH . DS . "rt_styleloader.php");
 	<div class="background"></div>
 	<div id="main">
 		<div id="wrapper" class="foreground">
+			<header>
 			<div id="header">
 				<jdoc:include type="modules" name="top" style="afterburner" />		
 				<a href="<?php echo $this->baseurl ?>" id="logo"></a>
@@ -49,6 +50,8 @@ require(YOURBASEPATH . DS . "rt_styleloader.php");
 			<div id="nav">
 				<jdoc:include type="modules" name="nav" style="none" />
 			</div>
+			</header>
+			<div id="content">
 			<div id="message">
 				<jdoc:include type="message" />
 			</div>
@@ -107,6 +110,8 @@ require(YOURBASEPATH . DS . "rt_styleloader.php");
 </div>
 </div>
 </div>
+</div>
+<footer>
 <?php if ($this->countModules('user7 or user8 or user9')) : ?>
 	<div id="mainmods3" class="spacer<?php echo $mainmod3_width; ?>">
 		<jdoc:include type="modules" name="user7" style="afterburner" />
@@ -128,8 +133,11 @@ require(YOURBASEPATH . DS . "rt_styleloader.php");
 <jdoc:include type="modules" name="debug" style="none" />
 </div>
 </div>
+</footer>
 <script src="/templates/rt_afterburner/js/jquery-1.10.2.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
 <script src="/templates/rt_afterburner/js/main.js"></script>
+<script src="/templates/rt_afterburner/js/supersized.core.3.2.1.js"></script>
+<script src="/templates/rt_afterburner/js/supersized.core.3.2.1.min.js"></script>
 </body>
 </html>

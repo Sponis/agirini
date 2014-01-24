@@ -5,3 +5,61 @@
     padding: 0;
     
 }
+
+#wrapper {
+	width: 100%;
+}
+
+header {
+	display: inline-block;
+	width: 20%;
+	float: left;
+}
+
+#content {
+	display: inline-block;
+	margin: 0 auto;
+	width: 40%;
+}
+
+footer {
+	display: inline-block;
+	width: 20%;
+	float: right;
+}
+
+#logo {
+	background-image: url(/templates/rt_afterburner/images/logo.png);
+	display:block;
+	height: 186px;
+	width: 168px;
+	margin: 0px 30px 60px 30px;
+}
+
+
+#nav ul{
+	margin-left: 40px;
+	padding: 0;
+}
+
+#nav li {
+	list-style: none;
+	margin-bottom: 5px;
+
+}
+
+#nav a{
+	text-decoration: none;
+	display: block;
+	width: 140px;
+	height: 20px;
+	background-color: #0a3266;
+	color: #fff;
+	text-align: center;
+}
+
+#nav a:hover {
+	background-color: #588b9e;
+	color: #0a3266;
+}
+

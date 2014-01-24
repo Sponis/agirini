@@ -1,6 +1,6 @@
 jQuery(document).ready(function() {
 
-	//if( jQuery('#ggl-map').length > 0 ){
+	if( jQuery('#ggl-map').length > 0 ){
 	//google map api
 		var map;
 
@@ -11,13 +11,13 @@ jQuery(document).ready(function() {
 			};
 			map = new google.maps.Map(document.getElementById('ggl-map'),
 				mapOptions);
-			console.log(map);
+		//	console.log(map);
 		}
 
 		google.maps.event.addDomListener(window, 'load', initialize);
 		
 
-	//}
+	}
 
 
 	

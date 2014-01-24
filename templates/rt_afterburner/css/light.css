@@ -52,10 +52,10 @@ p {margin-top:10px;margin-bottom:10px;}
 .article_row {overflow:hidden;margin:0 -10px 15px -10px;}
 
 /* Header */
-#logo {width:288px;height:58px;background:url(../images/light.png) 0 -272px no-repeat;display:block;margin:20px 15px;}
+/*#logo {width:288px;height:58px;background:url(../images/light.png) 0 -272px no-repeat;display:block;margin:20px 15px;}*/
 #header {overflow:hidden;}
 #header li {list-style:none;float:left;padding-left:15px;font-weight:bold;}
-#nav {height:34px;background:#888;z-index:1;position:relative;}
+/*#nav {height:34px;background:#888;z-index:1;position:relative;}
 #nav ul {margin:0 0 0 15px;}
 #nav li {list-style:none;float:left;padding-left:3px;height:34px;position:relative;}
 #nav li a {display:block;padding:0 10px;line-height:30px;color:#fff;font-weight:bold;}
@@ -68,7 +68,7 @@ p {margin-top:10px;margin-bottom:10px;}
 #nav li li a, #nav li li.active a, #nav li li a:hover {margin:0;height:30px;line-height:30px;background:#fff;border-top:1px solid #006B9F;color:#007EBA;}
 #nav li li a, #nav li.active li a {font-weight:normal;}
 #nav li:hover ul, #nav li.sfHover ul {left:4px;}
-#nav li li:hover ul, #nav li li li:hover ul, #nav li li li li:hover ul, #nav li li.sfHover ul, #nav li li li.sfHover ul, #nav li li li li.sfHover ul {left:0;}
+#nav li li:hover ul, #nav li li li:hover ul, #nav li li li li:hover ul, #nav li li.sfHover ul, #nav li li li.sfHover ul, #nav li li li li.sfHover ul {left:0;}*/
 
 /* Showcase */
 #showcase {margin:3px 0 8px 0;position:relative;color:#000;}
