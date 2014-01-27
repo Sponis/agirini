@@ -29,6 +29,7 @@ require(YOURBASEPATH . DS . "rt_styleloader.php");
 
 	?> 
 	<link rel="stylesheet" href="/templates/rt_afterburner/css/extra.css">
+	<link rel="stylesheet" href="/templates/rt_afterburner/css/supersized.core.css" type="text/css" media="screen"/>
 	<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/rt_afterburner/css/<?php echo $tstyle ?>.css" type="text/css" />
 <!--[if lte IE 6]>
 <script type="text/javascript" src="<?php echo $this->baseurl ?>/templates/rt_afterburner/js/ie_suckerfish.js"></script>
@@ -39,7 +40,9 @@ require(YOURBASEPATH . DS . "rt_styleloader.php");
 <![endif]-->
 </head>
 <body>
-	<div class="background"></div>
+	<div class="background">
+		<jdoc:include type="modules" name="backg" style="afterburner" />
+	</div>
 	<div id="main">
 		<div id="wrapper" class="foreground">
 			<header>
@@ -112,7 +115,7 @@ require(YOURBASEPATH . DS . "rt_styleloader.php");
 </div>
 </div>
 <footer>
-<?php if ($this->countModules('user7 or user8 or user9')) : ?>
+<!--<?php if ($this->countModules('user7 or user8 or user9')) : ?>
 	<div id="mainmods3" class="spacer<?php echo $mainmod3_width; ?>">
 		<jdoc:include type="modules" name="user7" style="afterburner" />
 		<jdoc:include type="modules" name="user8" style="afterburner" />
@@ -128,11 +131,11 @@ require(YOURBASEPATH . DS . "rt_styleloader.php");
 <?php endif; ?>
 <?php if ($rockettheme_logo=="true") : ?>
 	<a href="http://www.rockettheme.com"><span id="logo2"></span></a>
-<?php endif; ?>
+<?php endif; ?>-->
 <jdoc:include type="modules" name="footer" style="afterburner" />
-<jdoc:include type="modules" name="debug" style="none" />
+<!--<jdoc:include type="modules" name="debug" style="none" />
 </div>
-</div>
+</div>-->
 </footer>
 <script src="/templates/rt_afterburner/js/jquery-1.10.2.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
