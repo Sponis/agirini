@@ -23,7 +23,18 @@ require(YOURBASEPATH . DS . "rt_styleloader.php");
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" >
 <head>
-	<jdoc:include type="head" />
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Agia Irini Hotel at Santorini</title>
+    <meta name="description" content="Agia Irini Hotel at Santorini">
+    <meta name="author" content="Vassilis Sponis">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <link rel="stylesheet" href="/templates/rt_afterburner/css/normalize.css">
+    <script src="/templates/rt_afterburner/js/vendor/modernizr-2.6.2.min.js"></script>
+   	<jdoc:include type="head" />
 	<?php
 	require(YOURBASEPATH . DS . "rt_utils.php");
 

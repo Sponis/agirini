@@ -8,24 +8,40 @@
 
 #wrapper {
 	width: 100%;
+	height: 100%;
 }
 
 header {
-	display: inline-block;
+	position: absolute;
+	left: 0;
+	top: 0;
 	width: 20%;
 	float: left;
 }
 
 #content {
-	display: inline-block;
+	background-color: #0a3266;
+	background: rgba(10, 50, 102, 0.5);
+	color: #fff;
 	margin: 0 auto;
 	width: 40%;
 }
 
+#content a {
+	color: #fff;
+}
+
 footer {
-	display: inline-block;
+	position: absolute;
+	right: 0;
+	top: 0;
 	width: 20%;
 	float: right;
+	text-align: right;
+}
+
+footer a {
+	color: #fff;
 }
 
 #logo {
@@ -37,7 +53,7 @@ footer {
 }
 
 
-#nav ul{
+#nav ul {
 	margin-left: 40px;
 	padding: 0;
 }
@@ -48,30 +64,23 @@ footer {
 
 }
 
-#nav a{
+#nav a {
 	text-decoration: none;
 	display: block;
 	width: 140px;
 	height: 20px;
 	background-color: #0a3266;
+	background: rgba(10, 50, 102, 0.5);
 	color: #fff;
 	text-align: center;
-	/*-khtml-opacity:.50; 
- 	-moz-opacity:.50; 
- 	-ms-filter:”alpha(opacity=50)”;
- 	filter:alpha(opacity=50);
-  	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0.5);
-  	opacity:.50; */
 }
 
 #nav a:hover {
 	background-color: #588b9e;
 	color: #0a3266;
-	/*-khtml-opacity:.50; 
- 	-moz-opacity:.50; 
- 	-ms-filter:”alpha(opacity=50)”;
-  	filter:alpha(opacity=50);
-  	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0.5);
-  	opacity:.50;*/ 
 }
 
+.lang-active a {
+	background-color: #fff;
+	color: #0a3266;
+}
