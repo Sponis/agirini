@@ -6,8 +6,8 @@ jQuery(document).ready(function() {
 
 		function initialize() {
 			var mapOptions = {
-				zoom: 12,
-				center: new google.maps.LatLng(37.956, 23.710)
+				zoom: 14,
+				center: new google.maps.LatLng(36.431, 25.434)
 			};
 			map = new google.maps.Map(document.getElementById('ggl-map'),
 				mapOptions);
