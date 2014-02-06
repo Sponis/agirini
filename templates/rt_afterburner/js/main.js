@@ -1,5 +1,15 @@
 jQuery(document).ready(function() {
 
+	//toggle show-hide
+		jQuery(".content-toggler").hide();
+		jQuery(".toggle-trigger").click(function(event) {
+			event.preventDefault();
+		});
+		jQuery(".toggle-trigger").click(function() {
+			jQuery(".content-toggler").toggle();
+		});
+	
+
 	if( jQuery('#ggl-map').length > 0 ){
 	//google map api
 		var map;
@@ -17,11 +27,11 @@ jQuery(document).ready(function() {
 		google.maps.event.addDomListener(window, 'load', initialize);
 		
 
-	}
-
+	};
 
 	
 
 
 
 });
+

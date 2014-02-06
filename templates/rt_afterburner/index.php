@@ -33,7 +33,7 @@ require(YOURBASEPATH . DS . "rt_styleloader.php");
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
     <link rel="stylesheet" href="/templates/rt_afterburner/css/normalize.css">
-    <script src="/templates/rt_afterburner/js/vendor/modernizr-2.6.2.min.js"></script>
+    <script src="/templates/rt_afterburner/js/modernizr-2.6.2.min.js"></script>
    	<jdoc:include type="head" />
 	<?php
 	require(YOURBASEPATH . DS . "rt_utils.php");

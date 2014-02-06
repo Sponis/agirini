@@ -1,6 +1,6 @@
 #ggl-map {
-    width: 600px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
     margin: 0;
     padding: 0;
     
@@ -83,4 +83,20 @@ footer a {
 .lang-active a {
 	background-color: #fff;
 	color: #0a3266;
+}
+
+.content-toggler {
+	width: 100% !important ;
+}
+
+.moduletableform {
+	display: block;
+	float:left;
+	margin: 0 50px;
+}
+
+.moduletablemap {
+	display: block;
+	float: right;
+	margin: 0 50px;
 }
