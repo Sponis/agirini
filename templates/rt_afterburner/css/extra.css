@@ -26,11 +26,9 @@ header {
 }
 
 #content {
-	background-color: #164777;
-	background: rgba(22, 71, 119 0.9);
-	color: #fff;
 	margin: 0 auto;
 	width: 40%;
+	height: 100%;
 }
 
 #content a {
@@ -90,9 +88,13 @@ nav li:active {
 }
 
 .content-toggler {
+	background-color: #164777;
+	background: rgba(22, 71, 119 0.9);
+	color: #fff;
 	padding: 20px !important;
 	width: 100% !important ;
 	float: left;
+	height: 80%;
 }
 
 .moduletableform {
@@ -140,6 +142,9 @@ nav li:active {
 }
 
 .toggle-trigger {
+	background-color: #164777;
+	background: rgba(22, 71, 119 0.9);
+	color: #fff;
 	width: 100%;
 	margin: 0;
 	padding: 20px;

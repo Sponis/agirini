@@ -13,11 +13,11 @@ a {color:#007EBA;text-decoration:none;font-weight:bold;}
 a:hover {text-decoration:underline;}
 ul {margin:1em;}
 p {margin-top:10px;margin-bottom:10px;}
-#main {font-size:1.3em;line-height:140%;}
+#main {font-size:1.3em;line-height:140%; height: 100%;}
 /*.background {position:absolute;width:100%;height:130px;background:url(../images/light.png) 0 -384px repeat-x;}*/
 #main .foreground, #message, #showcase, .leading, #page {position:relative;}
 #message, #showcase {z-index:0;}
-#main-content {border-bottom:1px solid #ddd;}
+#main-content {height: 100%;}
 .dp20,.dp25,.dp33,.dp50,.dp100 {float:left;margin-top:15px;}
 .dp20 {width:20%;}
 .dp25 {width:25%;}
@@ -25,12 +25,12 @@ p {margin-top:10px;margin-bottom:10px;}
 .dp50 {width:50%;}
 .dp100 {width:100%;margin-top:0;}
 .clr {clear:both;font-size:0;}
-#colmask {clear:both;overflow:hidden;position:relative;width:100%;}
+#colmask {clear:both;overflow:hidden;position:relative;width:100%;height:100%;}
 #maincol, #wrapper {position:relative;}
-.s-c-s #colmid, .s-c-x #colright {float:left;position:relative;width:200%;}
+.s-c-s #colmid, .s-c-x #colright {float:left;position:relative;width:200%;height:100%;}
 .s-c-s #colright {float:left;left:50%;position:relative;width:100%;}
-.s-c-s #col1wrap {float:right;position:relative;right:100%;width:50%;}
-.s-c-s #col1pad, .x-c-s #col1, .x-c-s #colmid {overflow:hidden;}
+.s-c-s #col1wrap {float:right;position:relative;right:100%;width:50%;height:100;}
+.s-c-s #col1pad, .x-c-s #col1, .x-c-s #colmid {overflow:hidden;height:100;}
 .s-c-s #col1 {overflow:hidden;width:100%;}
 .s-c-s #col2 {float:left;position:relative;overflow:hidden;margin-left:-50%;}
 .s-c-s #col3 {float:left;position:relative;overflow:hidden;left:0;}
@@ -99,7 +99,7 @@ a.readon2 span {background:url(../images/light.png) 0 -344px;display:block;margi
 .breadcrumbs-pad {padding:0 1px;}
 div.breadcrumbs {background:url(../images/light.png) 0 -68px repeat-x;border-bottom:1px solid #e6e6e6;font-size:110%;font-weight:bold;margin:0;padding:7px 15px 5px;color:#777;border-top:1px solid #d9d9d9;}
 div.breadcrumbs .sep {padding:0 5px;}
-.component-pad {padding:0;float: left;width: 100%;}
+.component-pad {padding:0;float: left;width: 100%;height:100%;}
 .banneritem_text {margin-bottom:10px;}
 .inputbox{border:1px solid #ccc;padding:3px;}
 .pagination span, .pagination a {margin-right:5px;}
@@ -107,7 +107,7 @@ div.breadcrumbs .sep {padding:0 5px;}
 #colmask ul ul {margin-top:0;}
 #colmask ul ul li {list-style:square;}
 .item-page,
-.category-list {position: relative;}
+.category-list {position: relative;height:100%;}
 #colmask .component-pad .actions {position: absolute;right: 0;top: 0;margin: 0;}
 .category-list .hasTip {position:absolute;right:19px;top:2px}
 .category-list .actions .hasTip {position:static}
