@@ -1,14 +1,20 @@
 jQuery(document).ready(function() {
 
-	//toggle show-hide
+	// Toggler for contents in desktop 
+	
+	// Hide content on start
 	jQuery(".content-toggler").hide();
 	
-	jQuery(".toggle-trigger").click(function(event) {
+	// Toggle show/hide content on click to the targeted element
+	jQuery(".toggle-trigger").on('click', function(event) {
+		
+		// prevent the default behaviour of the click event in that element
 		event.preventDefault();
-	});
-	
-	jQuery(".toggle-trigger").click(function() {
-		jQuery(".content-toggler").toggle();
+		
+		// Toggle show/hide
+		jQuery(".content-toggler").toggle(700);
+		// Toggle active classname on the trigger element
+		jQuery(this).toggleClass('toggle-trigger-open');
 	});
 
 
