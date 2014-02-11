@@ -29,6 +29,7 @@ JHtml::addIncludePath(JPATH_COMPONENT.'/helpers');
 	</h2>
 	<?php endif; ?>
 <div class="content-toggler">
+	<div class="scroll-pane">
 	<?php if ($this->params->get('show_description', 1) || $this->params->def('show_description_image', 1)) : ?>
 	<div class="category-desc">
 		<?php if ($this->params->get('show_description_image') && $this->category->getParams()->get('image')) : ?>
@@ -55,5 +56,6 @@ JHtml::addIncludePath(JPATH_COMPONENT.'/helpers');
 		<?php echo $this->loadTemplate('children'); ?>
 	</div>
 	<?php endif; ?>
+	</div>
 </div>
 </div>

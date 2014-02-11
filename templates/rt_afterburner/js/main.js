@@ -38,11 +38,12 @@ jQuery(document).ready(function() {
 		}
 
 		google.maps.event.addDomListener(window, 'load', initialize);
-	};
+	}
 
 	//jscroll panel - mousewheel scroller
-	jQuery(function()	{
-		jQuery('.scroll-pane').jScrollPane();
-	});	
+	
+	if (jQuery('.scroll-pane').length > 0) {
+	jQuery('.scroll-pane').jScrollPane();
+	}
 
 });
