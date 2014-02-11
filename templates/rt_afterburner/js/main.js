@@ -10,11 +10,15 @@ jQuery(document).ready(function() {
 		
 		// prevent the default behaviour of the click event in that element
 		event.preventDefault();
+<<<<<<< Updated upstream
 		
 		// Toggle show/hide
 		jQuery(".content-toggler").toggle(700);
 		// Toggle active classname on the trigger element
 		jQuery(this).toggleClass('toggle-trigger-open');
+=======
+	
+
 	});
 
 
