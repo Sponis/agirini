@@ -84,7 +84,7 @@ nav li:active {
 }
 
 .content-toggler {
-	width: 100% !important ;
+	width: 80% !important ;
 }
 
 .moduletableform {
@@ -101,9 +101,9 @@ nav li:active {
 
 .mod-languages {
 	background-color: #fff;
-	width: 125px;
+	width: 120px;
 	float: right;
-	margin: 10px 20px 5px 20px;
+	overflow: hidden;
 }
 
 .mod-languages li {
@@ -116,21 +116,18 @@ nav li:active {
 	color: #164777 !important;
 }
 
-
-/*.mreqform {
-	width: 120px;
-	height: 18px;
+.reqform {
 	background-color: #f58220;
-}
-
-/*.reqform {
-	font-weight: normal;
-}
-
-/*.customlowprice {
 	width: 120px;
 	float: right;
+	overflow: hidden;
+}
+
+.lowprice {
 	background-color: #164777;
 	color: #fff;
+	width: 120px;
+	float: right;
+	overflow: hidden;
 }
 
