@@ -148,8 +148,11 @@ require(YOURBASEPATH . DS . "rt_styleloader.php");
 </footer>
 <script src="/templates/rt_afterburner/js/jquery-1.10.2.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
-<script src="/templates/rt_afterburner/js/main.js"></script>
+<script src="/templates/rt_afterburner/js/jquery.mousewheel.js"></script>
+<script src="/templates/rt_afterburner/js/jquery.jscrollpane.min.js"></script>
 <script src="/templates/rt_afterburner/js/supersized.core.3.2.1.min.js"></script>
+<!-- Main.js always called last-->
+<script src="/templates/rt_afterburner/js/main.js"></script>
 <!--<div class="background">-->
 		<jdoc:include type="modules" name="backg" style="none" />
 	<!--</div>-->

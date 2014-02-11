@@ -92,6 +92,7 @@ nav li:active {
 .content-toggler {
 	padding: 20px !important;
 	width: 100% !important ;
+	float: left;
 }
 
 .moduletableform {
@@ -143,4 +144,5 @@ nav li:active {
 	margin: 0;
 	padding: 20px;
 	cursor: pointer;
+	float: left;
 }
