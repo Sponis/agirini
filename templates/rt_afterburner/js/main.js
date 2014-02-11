@@ -1,5 +1,14 @@
 jQuery(document).ready(function() {
 
+	//jscroll panel - mousewheel scroller
+	
+	if (jQuery('.scroll-pane').length > 0) {
+		
+		jQuery('.scroll-pane').jScrollPane({
+				showArrows: true
+		});
+	}
+
 	// Toggler for contents in desktop 
 	
 	// Hide content on start
@@ -8,22 +17,30 @@ jQuery(document).ready(function() {
 	// Toggle show/hide content on click to the targeted element
 	jQuery(".toggle-trigger").on('click', function(event) {
 		
-		// prevent the default behaviour of the click event in that element
+		// Prevent the default behaviour of the click event in that element
 		event.preventDefault();
 
 		
 		// Toggle show/hide
-		jQuery(".content-toggler").toggle(700);
+		jQuery(".content-toggler").toggle(700, function() {
+			
+			// Re initialise the scrollpane plugin when the toggled element becomes visible
+			// so the scroller can recalculate the correct dimentions
+			if(jQuery(this).is(':visible') && jQuery('.scroll-pane').length > 0){
+				jQuery('.scroll-pane').jScrollPane({
+					reinitialise:	true,
+					showArrows:		true
+				});
+			}			
+		});
+		
 		// Toggle active classname on the trigger element
 		jQuery(this).toggleClass('toggle-trigger-open');
-
-	
-
 	});
 
 
 	if (jQuery('#ggl-map').length > 0) {
-		//google map api
+		// Google map api
 		var map;
 
 		function initialize() {
@@ -39,11 +56,4 @@ jQuery(document).ready(function() {
 
 		google.maps.event.addDomListener(window, 'load', initialize);
 	}
-
-	//jscroll panel - mousewheel scroller
-	
-	if (jQuery('.scroll-pane').length > 0) {
-	jQuery('.scroll-pane').jScrollPane();
-	}
-
 });
