@@ -28,18 +28,18 @@ p {margin-top:10px;margin-bottom:10px;}
 #colmask {clear:both;overflow:hidden;position:relative;width:100%;height:100%;}
 #maincol, #wrapper {position:relative;}
 .s-c-s #colmid, .s-c-x #colright {float:left;position:relative;width:200%;height:100%;}
-.s-c-s #colright {float:left;left:50%;position:relative;width:100%;}
+.s-c-s #colright {float:left;left:50%;position:relative;width:100%;height:100%;}
 .s-c-s #col1wrap {float:right;position:relative;right:100%;width:50%;height:100;}
-.s-c-s #col1pad, .x-c-s #col1, .x-c-s #colmid {overflow:hidden;height:100;}
-.s-c-s #col1 {overflow:hidden;width:100%;}
-.s-c-s #col2 {float:left;position:relative;overflow:hidden;margin-left:-50%;}
-.s-c-s #col3 {float:left;position:relative;overflow:hidden;left:0;}
-.s-c-x #col1wrap {float:right;position:relative;width:50%;}
-.s-c-x #col1 {overflow:hidden;position:relative;right:100%;}
-.s-c-x #col2 {float:left;position:relative;}
+.s-c-s #col1pad, .x-c-s #col1, .x-c-s #colmid {overflow:hidden;height:100%;}
+.s-c-s #col1 {overflow:hidden;width:100%;height:100%;}
+.s-c-s #col2 {float:left;position:relative;overflow:hidden;margin-left:-50%;height:100%}
+.s-c-s #col3 {float:left;position:relative;overflow:hidden;left:0;height:100%;}
+.s-c-x #col1wrap {float:right;position:relative;width:50%;height:100%;}
+.s-c-x #col1 {overflow:hidden;position:relative;right:100%;height:100%;}
+.s-c-x #col2 {float:left;position:relative;height:100%;}
 .x-c-s #colright {float:left;position:relative;right:100%;width:200%;}
 .x-c-s #col1wrap {float:left;left:50%;position:relative;width:50%;}
-.x-c-s #col3 {float:right;position:relative;}
+.x-c-s #col3 {float:right;position:relative;height:100%;}
 .s-c-s .ctr-color1, .s-c-s .ckl-color1, .s-c-x .ckl-color1, .x-c-s .cdr-color1 {background:#eee;}
 .s-c-s .ctr-color2, .s-c-s .ckl-color2, .s-c-x .ckl-color2, .x-c-s .cdr-color2 {background:#d1e0e7;}
 .s-c-s #col1pad, .s-c-x #colright, .x-c-s #colright, body {background:#fff;}
