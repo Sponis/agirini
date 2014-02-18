@@ -28,6 +28,8 @@ jQuery(document).ready(function() {
 			// so the scroller can recalculate the correct dimentions
 			if(jQuery(this).is(':visible') && jQuery('.scroll-pane').length > 0){
 				jQuery('.scroll-pane').jScrollPane({
+					verticalDragMinHeight: 40,
+					verticalDragMaxHeight: 40,
 					reinitialise:	true,
 					showArrows:		true
 				});
