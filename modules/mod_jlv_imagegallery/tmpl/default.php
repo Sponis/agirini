@@ -47,31 +47,11 @@ if (count($items)>0){
 
 
 <div id="jlv_imagegallery_<?php echo $instance;?>" class="jlv-gallery <?php if( $params->get("effect") == 'slide' ){ echo $params->get("effect");}?> <?php echo $params->get("deviceclass_sfx");?>" data-interval="<?php echo $interval;?>" data-pause="hover">
-	<div class="pre-text">
-		<?php echo $params->get('pretext'); ?>
-	</div>	
-	<div class="jlv-content">
-		<!--
-		<div class="jlv-navigation clearfix">
-			<div class="jlv-buttons">
-				<ul>
-					<?php if($show_nextprev==1){ ?>
-					<li class="jlv-prev" href="#jlv_imagegallery_<?php echo $instance;?>" data-jslide="prev"></li>
-					<?php } ?>
-					<?php for($j=0; $j<$pags; $j++): ?>
-						<li class="jlv-nav <?php if( $j == 0 ){echo ' sel';}?>"  href="#jlv_imagegallery_<?php echo $instance;?>" data-jslide="<?php echo $j;?>"></li>
-					<?php endfor; ?>						
-					<?php if($show_nextprev==1){ ?>
-					<li class="jlv-next"  href="#jlv_imagegallery_<?php echo $instance;?>" data-jslide="next"></li>
-					<?php } ?>
-				</ul>
-			</div>
-		</div>
-		-->
-		<div class="jlv-items">
+	
+		
 			<?php
 			for($i=0; $i<$pags; $i++){ ?>
-			<div class="jlv-item <?php if($i==0){echo "active";}?> item">
+			
 				<?php $start = $i * $total_image_pag;
 					$end   = ($i + 1) * $total_image_pag;
 					$qu = 0;
@@ -82,81 +62,25 @@ if (count($items)>0){
 						$qu++;
 						
  						if ($key >= $start && $key < $end) {?>
-					<div class="item-info">
+					
 						<a class="item-info-image fancybox" rel="jlv_imagegallery_image_<?php echo $instance;?>" href="<?php echo $item['url']; ?>" title="<?php echo $item['title'] ;?>">
 							<?php echo JLVImageGallery::imageTag($item['image']);?>
 							<span class="bg-hover"></span>
 							<span class="icon-hover"></span>
 						</a>
-						
-					</div>
-			    	<?php
-			    		$clear = 'clr1';
-			    		if ($qu % 2 == 0) $clear .= ' clr2';
-			    		if ($qu % 3 == 0) $clear .= ' clr3';
-			    		if ($qu % 4 == 0) $clear .= ' clr4';
-			    		if ($qu % 5 == 0) $clear .= ' clr5';
-			    		if ($qu % 6 == 0) $clear .= ' clr6';
-			    	?>
-	    			<div class="<?php echo $clear; ?>"></div> 					
+	    								
 				<?php
-					}} ?>
-			</div>
+					}} ?>			
 		<?php
 			}
 			?>
-		</div>
-	</div>
-	<div class="post-text">
-		<?php echo $params->get('posttext'); ?>
-	</div>
+		
+
 </div>
 
 
 <?php } else{ echo JText::_('There are no image inside folder: ') . $params->get('folder');}?>
-<!--
-<script type="text/javascript">
-jQuery(document).ready(function($) {
-	$('#jlv_imagegallery_<?php echo $instance;?>').each(function(){
-		var $this = $(this), options = options = !$this.data('modal') && $.extend({}, $this.data());
-		$this.jcarousel(options);
-		$this.bind('jslide', function(e){
-			var index = $(this).find(e.relatedTarget).index();
-			$('[data-jslide]').each(function(){
-				var $nav = $(this), $navData = $nav.data(), href, $target = $($nav.attr('data-target') || (href = $nav.attr('href')) && href.replace(/.*(?=#[^\s]+$)/, ''));
-				if ( !$target.is($this) ) return;
-				if (typeof $navData.jslide == 'number' && $navData.jslide==index){
-					$nav.addClass('sel');
-				} else {
-					$nav.removeClass('sel');
-				}
-			});
 
-		});
-	});
-	
-	$("a[rel=jlv_imagegallery_image_<?php echo $instance;?>]").fancybox({
-		'transitionIn'	: '<?php echo $transition; ?>',
-		'transitionOut'	: '<?php echo $transition; ?>',
-		'titlePosition' : '<?php echo $titleposition; ?>',
-		'titleFormat'	: function(title, currentArray, currentIndex, currentOpts) {
-			return 'Image ' + (currentIndex + 1) + ' / ' + currentArray.length + (title.length ? '  - ' + title : '') + '';
-		},
-		easingIn: 'easeInOutQuad',
-		easingOut: 'easeInOutQuad',
-		onStart: function(){
-			var $btn = $('#jlv_imagegallery_<?php echo $instance; ?>');
-			$btn.jcarousel('pause');
-		},
-		onClosed: function(){
-			var $btn = $('#jlv_imagegallery_<?php echo $instance; ?>');
-			$btn.jcarousel('cycle');
-		}
-	});
-	
-});
-</script>
--->
 <script type="text/javascript">
 	$(document).ready(function() {
 		$(".fancybox").fancybox();
