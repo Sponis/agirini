@@ -11,16 +11,19 @@
 // No direct access to this file
 defined('_JEXEC') or die;
 
-JHtml::stylesheet('modules/mod_jlv_imagegallery/assets/css/gallery.css');
-JHtml::stylesheet('modules/mod_jlv_imagegallery/assets/css/jquery.fancybox-1.3.4.css');
+//JHtml::stylesheet('modules/mod_jlv_imagegallery/assets/css/gallery.css');
+//JHtml::stylesheet('modules/mod_jlv_imagegallery/assets/css/jquery.fancybox-1.3.4.css');
+JHtml::stylesheet('modules/mod_jlv_imagegallery/assets/js/jquery.fancybox.css');
 if( !defined('SMART_JQUERY') && $params->get('include_jquery', 0) == "1" ){
-	JHtml::script('modules/mod_jlv_imagegallery/assets/js/jquery-1.8.2.min.js');
+	//JHtml::script('modules/mod_jlv_imagegallery/assets/js/jquery-1.8.2.min.js');
+	JHtml::script('modules/mod_jlv_imagegallery/assets/js/jquery-1.10.1.min.js');
 	JHtml::script('modules/mod_jlv_imagegallery/assets/js/jquery-noconflict.js');
 	define('SMART_JQUERY', 1);
 }
-JHtml::script('modules/mod_jlv_imagegallery/assets/js/jsmart.easing.1.3.js');
-JHtml::script('modules/mod_jlv_imagegallery/assets/js/jquery.fancybox-1.3.4.pack.js');
-JHtml::script('modules/mod_jlv_imagegallery/assets/js/jcarousel.js');
+//JHtml::script('modules/mod_jlv_imagegallery/assets/js/jsmart.easing.1.3.js');
+//JHtml::script('modules/mod_jlv_imagegallery/assets/js/jquery.fancybox-1.3.4.pack.js');
+//JHtml::script('modules/mod_jlv_imagegallery/assets/js/jcarousel.js');
+JHtml::script('modules/mod_jlv_imagegallery/assets/js/jquery.fancybox.pack.js');
 
 ImageHelper::setDefault($params);
 if (count($items)>0){
@@ -48,6 +51,7 @@ if (count($items)>0){
 		<?php echo $params->get('pretext'); ?>
 	</div>	
 	<div class="jlv-content">
+		<!--
 		<div class="jlv-navigation clearfix">
 			<div class="jlv-buttons">
 				<ul>
@@ -63,6 +67,7 @@ if (count($items)>0){
 				</ul>
 			</div>
 		</div>
+		-->
 		<div class="jlv-items">
 			<?php
 			for($i=0; $i<$pags; $i++){ ?>
@@ -78,7 +83,7 @@ if (count($items)>0){
 						
  						if ($key >= $start && $key < $end) {?>
 					<div class="item-info">
-						<a class="item-info-image" rel="jlv_imagegallery_image_<?php echo $instance;?>" href="<?php echo $item['url']; ?>" title="<?php echo $item['title'] ;?>">
+						<a class="item-info-image fancybox" rel="jlv_imagegallery_image_<?php echo $instance;?>" href="<?php echo $item['url']; ?>" title="<?php echo $item['title'] ;?>">
 							<?php echo JLVImageGallery::imageTag($item['image']);?>
 							<span class="bg-hover"></span>
 							<span class="icon-hover"></span>
@@ -105,11 +110,11 @@ if (count($items)>0){
 	<div class="post-text">
 		<?php echo $params->get('posttext'); ?>
 	</div>
-	<div class="copyright"><a href="http://jlvextension.com/joomla-extension/jlv-imagegallery.html" target="_blank" title="Image Gallery">Image Gallery</a> by <a href="http://jlvextension.com" target="_blank" title="Joomla! Extension">Joomla! Extension</a></div>
 </div>
 
 
 <?php } else{ echo JText::_('There are no image inside folder: ') . $params->get('folder');}?>
+<!--
 <script type="text/javascript">
 jQuery(document).ready(function($) {
 	$('#jlv_imagegallery_<?php echo $instance;?>').each(function(){
@@ -151,4 +156,9 @@ jQuery(document).ready(function($) {
 	
 });
 </script>
-
+-->
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".fancybox").fancybox();
+	});
+</script>
