@@ -30,7 +30,7 @@ if (count($items)>0){
 	$instance	= rand().time();
 	$titleposition			= $params->get("titleposition", 'over');
 	$transition				= $params->get("transition", 'none');
-	$show_nextprev					= $params->get('show_nextprev', 1);
+	$show_nextprev			= $params->get('show_nextprev', 1);
 	$count = count($items);
 	$total = (int)$params->get('numberImage',27);
 	if($total > $count){
