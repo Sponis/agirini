@@ -51,13 +51,14 @@ require(YOURBASEPATH . DS . "rt_styleloader.php");
 	<?php require(YOURBASEPATH . DS . "rt_utils.php"); ?> 
 </head>
 <body>
-	
 	<div id="main">
 		<div id="wrapper" class="foreground">
 			<header>
 			<div id="header">
 				<jdoc:include type="modules" name="top" style="afterburner" />		
-				<a href="<?php echo $this->baseurl ?>" id="logo"></a>
+				<a href="<?php echo $this->baseurl ?>" title="<?php echo htmlspecialchars($this->getTitle(), ENT_COMPAT, 'UTF-8'); ?>" id="logo">
+					<span class="inv"><?php echo htmlspecialchars($this->getDescription(), ENT_COMPAT, 'UTF-8'); ?></span>
+				</a>
 			</div>
 			<div id="nav">
 				<jdoc:include type="modules" name="nav" style="none" />

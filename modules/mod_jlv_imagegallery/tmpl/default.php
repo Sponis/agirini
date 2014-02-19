@@ -65,8 +65,6 @@ if (count($items)>0){
 					
 						<a class="item-info-image fancybox" rel="jlv_imagegallery_image_<?php echo $instance;?>" href="<?php echo $item['url']; ?>" title="<?php echo $item['title'] ;?>">
 							<?php echo JLVImageGallery::imageTag($item['image']);?>
-							<span class="bg-hover"></span>
-							<span class="icon-hover"></span>
 						</a>
 	    								
 				<?php
