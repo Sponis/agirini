@@ -44,6 +44,14 @@ if (!empty($this->item->pagination) AND $this->item->pagination && !$this->item-
 <?php endif; ?>
 <div class="content-toggler">
 	<div class="scroll-pane">
+		<?php 
+		// This loads the module position
+		$document = JFactory::getDocument();
+		$renderer = $document->loadRenderer('modules');
+		$position = "articlegallery";
+		$options = array('style' => 'raw');
+		echo $renderer->render($position, $options, null);
+		?>
 		<?php if ($canEdit ||  $params->get('show_print_icon') || $params->get('show_email_icon')) : ?>
 		<ul class="actions">
 			<?php if (!$this->print) : ?>
@@ -217,6 +225,14 @@ if (!empty($this->item->pagination) AND $this->item->pagination AND $this->item-
 <?php endif; ?>
 
 <?php echo $this->item->event->afterDisplayContent; ?>
+<?php 
+// This loads the module position
+$document = JFactory::getDocument();
+$renderer = $document->loadRenderer('modules');
+$position = "articlefooter";
+$options = array('style' => 'raw');
+echo $renderer->render($position, $options, null);
+?>
 </div>
 </div>
 </div>

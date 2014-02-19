@@ -12,6 +12,13 @@
  box-sizing: border-box;         /* Opera/IE 8+ */
 }
 
+
+.inv {
+text-indent: -9999%;
+font-size: 1px;
+line-height: 1px;
+}
+
 #wrapper {
 	width: 100% !important;
 	height: 100%;
@@ -20,7 +27,7 @@
 
 h2 {
 	text-transform: uppercase;
-	font-size: 12px;
+	font-size: 18px;
 	font-weight: normal;
 }
 
@@ -35,6 +42,7 @@ header {
 #content {
 	margin: 0 auto;
 	width: 40%;
+	max-width: 658px;
 	height: 100%;
 }
 
@@ -43,7 +51,8 @@ header {
 }
 
 .menu {
-	width: 140px;
+	width: 168px;
+	margin-left: 30px;
 	overflow: hidden;
 }
 
@@ -70,13 +79,12 @@ footer a {
 
 
 #nav ul {
-	margin-left: 40px;
 	padding: 0;
 }
 
 #nav li {
 	list-style: none;
-	width: 140px;
+	width: 100%;
 	margin-bottom: 5px;
 	background-color: #164777;
 }
@@ -84,10 +92,9 @@ footer a {
 #nav a {
 	text-decoration: none;
 	display: block;
-	width: 145px;
-	height: 20px;
-	font-family: Arial;
-	font-size: 11.5px;
+	width: 100%;
+	line-height: 30px;
+	font-size: 16px;
 	font-weight: normal;
 	text-align: center;
 	color: #fff;
@@ -163,7 +170,7 @@ footer a {
 	background-color: rgba(22, 71, 119 0.25);
 	background-image: url(/templates/rt_afterburner/images/down.png);
 	background-repeat: no-repeat;
-	background-position: 95% 50%;
+	background-position: 97% 50%;
 	color: #fff;
 	width: 100%;
 	margin: 0;
@@ -178,7 +185,7 @@ footer a {
 	background-color: rgba(22, 71, 119 0.25);
 	background-image: url(/templates/rt_afterburner/images/up.png);
 	background-repeat: no-repeat;
-	background-position: 95% 50%;
+	background-position: 97% 50%;
 	color: #fff;
 	width: 100%;
 	margin: 0;
@@ -244,7 +251,7 @@ footer a {
 }
 
 .jspDrag {
-	color: rgb(60, 156, 215);
+	background-color: rgb(60, 156, 215);
 	position: relative;
 	top: 0;
 	left: 0;
@@ -346,6 +353,8 @@ footer a {
 }
 
 .jlv-gallery .jlv-content {
+	width: 100%;
+	position: relative;
     border: none;
 }
 
@@ -353,7 +362,16 @@ footer a {
 	display: none;
 }
 
+
+.jlv-gallery a {
+	display: block;
+	width: 31%;
+	margin: 1%;
+	float: left;
+}
+
 .jlv-gallery img {
+	width: 100%;
 	border: none;
 	border-radius: 0;
 }
@@ -423,11 +441,9 @@ footer a {
 	overflow: hidden;
 }
 
-.article-footer {
-	float: left;
+.scroll-pane .custom {
+	position: relative;
 	width: 100%;
 	margin-top: 20px;
-	position: absolute;
-	bottom: 0px;
-	left: 0px;
+
 }
