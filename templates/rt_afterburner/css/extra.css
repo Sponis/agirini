@@ -112,7 +112,7 @@ footer a {
 
 .content-toggler {
 	background-color: #164777;
-	background-color: rgba(22, 71, 119 0.25);
+	background-color: rgba(22, 71, 119, 0.9);
 	color: #fff;
 	padding: 20px !important;
 	width: 100% !important ;
@@ -167,7 +167,7 @@ footer a {
 
 .toggle-trigger {
 	background-color: #164777;
-	background-color: rgba(22, 71, 119 0.25);
+	background-color: rgba(22, 71, 119, 0.9);
 	background-image: url(/templates/rt_afterburner/images/down.png);
 	background-repeat: no-repeat;
 	background-position: 97% 50%;
@@ -182,7 +182,7 @@ footer a {
 
 .toggle-trigger-open {
 	background-color: #164777;
-	background-color: rgba(22, 71, 119 0.25);
+	background-color: rgba(22, 71, 119, 0.9);
 	background-image: url(/templates/rt_afterburner/images/up.png);
 	background-repeat: no-repeat;
 	background-position: 97% 50%;
@@ -358,6 +358,13 @@ footer a {
     border: none;
 }
 
+.jlv-gallery {
+	width: 100%;
+	position: relative;
+    border: none;
+    overflow: hidden;
+}
+
 .copyright {
 	display: none;
 }
@@ -366,8 +373,13 @@ footer a {
 .jlv-gallery a {
 	display: block;
 	width: 31%;
-	margin: 1%;
+	margin: 3px 1%;
 	float: left;
+}
+
+.jlv-gallery a:hover {
+	opacity: 0.8 
+
 }
 
 .jlv-gallery img {
