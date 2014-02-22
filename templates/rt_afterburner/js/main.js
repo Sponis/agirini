@@ -11,8 +11,18 @@ jQuery(document).ready(function() {
 
 	// Toggler for contents in desktop 
 	
-	// Hide content on start
-	jQuery(".content-toggler").hide();
+	// content open in the beginning
+	jQuery(".toggle-trigger").addClass('toggle-trigger-open');
+	
+	// reinitialise scroller on window resize
+	jQuery(window).on('resize', function(event) {
+		jQuery('.scroll-pane').jScrollPane({
+			verticalDragMinHeight: 40,
+			verticalDragMaxHeight: 40,
+			reinitialise:	true,
+			showArrows:		true
+		});		
+	});
 	
 	// Toggle show/hide content on click to the targeted element
 	jQuery(".toggle-trigger").on('click', function(event) {

@@ -233,6 +233,14 @@ $position = "articlefooter";
 $options = array('style' => 'raw');
 echo $renderer->render($position, $options, null);
 ?>
+<?php 
+		// This loads the module position
+		$document = JFactory::getDocument();
+		$renderer = $document->loadRenderer('modules');
+		$position = "welcome";
+		$options = array('style' => 'raw');
+		echo $renderer->render($position, $options, null);
+		?>
 </div>
 </div>
 </div>

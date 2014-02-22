@@ -142,7 +142,7 @@ require(YOURBASEPATH . DS . "rt_styleloader.php");
 <?php if ($rockettheme_logo=="true") : ?>
 	<a href="http://www.rockettheme.com"><span id="logo2"></span></a>
 <?php endif; ?>-->
-<jdoc:include type="modules" name="footer" style="afterburner" />
+<jdoc:include type="modules" name="footer" style="none" />
 <!--<jdoc:include type="modules" name="debug" style="none" />
 </div>
 </div>-->

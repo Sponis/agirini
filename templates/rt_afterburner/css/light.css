@@ -102,9 +102,9 @@ div.breadcrumbs .sep {padding:0 5px;}
 .banneritem_text {margin-bottom:10px;}
 .inputbox{border:1px solid #ccc;padding:3px;}
 .pagination span, .pagination a {margin-right:5px;}
-#colmask ul li {list-style:circle;}
+/*#colmask ul li {list-style:circle;}
 #colmask ul ul {margin-top:0;}
-#colmask ul ul li {list-style:square;}
+#colmask ul ul li {list-style:square;}*/
 .item-page,
 .category-list {position: relative;height:100%;}
 #colmask .component-pad .actions {position: absolute;right: 0;top: 0;margin: 0;}
