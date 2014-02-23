@@ -1,7 +1,12 @@
+.map {
+	width: 100%;
+	height: 100%;
+}
+
 #ggl-map {
-    width: 300px;
-    height: 300px;
-    margin: 0;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
     padding: 0;
     
 }
@@ -125,16 +130,40 @@ footer a {
 }
 
 .moduletableform {
-	display: block;
+	width: 100%;
 	float:left;
-	margin: 0 50px;
+	clear: both;
 }
 
 .moduletablemap {
-	display: block;
-	float: right;
-	margin: 0 50px;
+	width: 50%;
+	height: 300px;
+	float: left;
+	margin: 10;
 }
+
+.epikoinwnia {
+	width: 40%;
+	float: right;
+
+}
+
+.jspPane .epikoinwnia ul {
+	margin: 10px 0;
+}
+
+.jspPane .epikoinwnia li {
+	list-style: none;
+}
+
+.jspPane .epikoinwnia li:before {
+	content: " "
+}
+
+.jspPane .epikoinwnia a {
+	color: #42A7D9 !important;
+	margin: 10px 0;
+} 
 
 .mod-languages {
 	background-color: #fff;
@@ -143,6 +172,11 @@ footer a {
 	overflow: hidden;
 	margin-bottom: 5px;
 }
+
+.mod-languages ul {
+	width: 120px;
+}
+
 .mod-languages a {
 	color: #164777 !important;
 	padding: 2px;
@@ -451,6 +485,7 @@ footer a {
 
 .welcome {
 	float: right;
+	margin-top: 20px;
 	margin-right: 20px;
 	text-align: right;
 }
@@ -515,3 +550,4 @@ footer a {
 	clear: both;
 
 }
+

@@ -53,19 +53,30 @@ jQuery(document).ready(function() {
 
 	if (jQuery('#ggl-map').length > 0) {
 		// Google map api
-		var map;
-
+		
 		function initialize() {
-			
+
+			var myLatlng = new google.maps.LatLng(36.4351382, 25.4205852);
+
 			var mapOptions = {
-				zoom: 14,
-				center: new google.maps.LatLng(36.431, 25.434)
-			};
+				zoom: 11,
+				center: myLatlng
+			}
 			
-			map = new google.maps.Map(document.getElementById('ggl-map'), mapOptions);
-			//	console.log(map);
+			var map = new google.maps.Map(document.getElementById('ggl-map'), mapOptions);
+			//	marker;
+			 var marker = new google.maps.Marker({
+     		 position: myLatlng,
+     		 map: map,
+     		 title: 'Hello World!'
+
+		});
 		}
 
 		google.maps.event.addDomListener(window, 'load', initialize);
 	}
 });
+
+
+36.4351382,25.4205852
+
