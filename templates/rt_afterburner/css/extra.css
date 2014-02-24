@@ -342,11 +342,10 @@ footer a {
 	margin: 0;
 }
 
-/*.jspArrow.jspDisabled
+.jspArrow.jspDisabled
 {
 	cursor: default;
-	background: #80808d;
-}*/
+}
 
 .jspVerticalBar .jspArrow
 {
@@ -515,6 +514,7 @@ footer a {
 
 
 .social {
+	display: block;
 	width: 18px;
 	height: 18px;
 	background-image: url(/templates/rt_afterburner/images/fb_icon.png);
