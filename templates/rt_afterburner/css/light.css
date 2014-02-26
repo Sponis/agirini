@@ -9,7 +9,7 @@ h1,.componentheading {font-size:180%;}
 h3 {font-size:130%;}
 h4 {font-size:110%;}
 a {color:#007EBA;text-decoration:none;}
-a:hover {text-decoration:underline;}
+/*a:hover {text-decoration:underline;}*/
 ul {margin:1em;}
 p {margin-top:10px;margin-bottom:10px;}
 #main {font-size:1.3em;line-height:140%; height: 100%;}
@@ -43,8 +43,8 @@ p {margin-top:10px;margin-bottom:10px;}
 .s-c-s .ctr-color2, .s-c-s .ckl-color2, .s-c-x .ckl-color2, .x-c-s .cdr-color2 {background:#d1e0e7;}
 .s-c-s #col1pad, .s-c-x #colright, .x-c-s #colright, body {background:#fff;}
 .cols-1 .item {display:block;float:none;margin:0;width:100%;}
-.cols-2 .item {width:49%;overflow:hidden;}
-.cols-3 .item {width:30%;}
+.cols-2 .item {width:100%;overflow:hidden;}
+.cols-3 .item {width:100%;}
 .column-1, .column-2 {position:relative;float:left;margin:0;}
 .colpad {padding:0 10px;position:relative;}
 .column-2 {float:right;width:49%;}
