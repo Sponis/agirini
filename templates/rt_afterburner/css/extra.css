@@ -69,8 +69,6 @@ footer {
 	float: right;
 	text-align: center;
 	padding-right: 20px;
-/*	background-color: #fff;
-	background-size: 20px 20px;*/
 }
 
 footer a {
@@ -152,30 +150,30 @@ footer a {
 	margin: 10;
 }
 
-.epikoinwnia {
+.contact {
 	width: 40%;
 	float: right;
 
 }
 
-.jspPane .epikoinwnia ul {
+.jspPane .contact ul {
 	margin: 10px 0;
 }
 
-.jspPane .epikoinwnia li {
+.jspPane .contact li {
 	list-style: none;
 }
 
-.jspPane .epikoinwnia li:before {
+.jspPane .contact li:before {
 	content: " "
 }
 
-.jspPane .epikoinwnia a {
+.jspPane .contact a {
 	color: #42A7D9 !important;
 	margin: 10px 0;
 } 
 
-.jspPane .epikoinwnia p{
+.jspPane .contact p{
 	margin-top: 0;
 }
 
