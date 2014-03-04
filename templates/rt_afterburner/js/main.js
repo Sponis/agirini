@@ -56,7 +56,7 @@ jQuery(document).ready(function() {
 		
 		function initialize() {
 
-			var myLatlng = new google.maps.LatLng(36.4351382, 25.4205852);
+			var myLatlng = new google.maps.LatLng(36.454151, 25.435230);
 
 			var mapOptions = {
 				zoom: 11,
@@ -78,5 +78,5 @@ jQuery(document).ready(function() {
 });
 
 
-36.4351382,25.4205852
+
 
