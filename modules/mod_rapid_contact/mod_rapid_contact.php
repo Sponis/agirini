@@ -8,13 +8,16 @@ $fromName = @$params->get('from_name', 'Rapid Contact');
 $fromEmail = @$params->get('from_email', 'rapid_contact@yoursite.com');
 
 // Text Parameters
+$myNameLabel = $params->get('name_label', 'Full Name:');
 $myEmailLabel = $params->get('email_label', 'Email:');
 $mySubjectLabel = $params->get('subject_label', 'Subject:');
 $myMessageLabel = $params->get('message_label', 'Message:');
 $buttonText = $params->get('button_text', 'Send Message');
 $pageText = $params->get('page_text', 'Thank you for your contact.');
 $errorText = $params->get('error_text', 'Your message could not be sent. Please try again.');
+$noName = $params->get('no_name', 'Please write your full name');
 $noEmail = $params->get('no_email', 'Please write your email');
+$invalidName = $params->get('invalid_name', 'Please write a valid name');
 $invalidEmail = $params->get('invalid_email', 'Please write a valid email');
 $wrongantispamanswer = $params->get('wrong_antispam', 'Wrong anti-spam answer');
 $pre_text = $params->get('pre_text', '');
@@ -22,6 +25,7 @@ $pre_text = $params->get('pre_text', '');
 // Size and Color Parameters
 $thanksTextColor = $params->get('thank_text_color', '#FF0000');
 $error_text_color = $params->get('error_text_color', '#FF0000');
+$nameWidth = $params->get('name_width', '15');
 $emailWidth = $params->get('email_width', '15');
 $subjectWidth = $params->get('subject_width', '15');
 $messageWidth = $params->get('message_width', '13');
@@ -66,11 +70,13 @@ $url = htmlentities($url, ENT_COMPAT, "UTF-8");
 
 $myError = '';
 $CORRECT_ANTISPAM_ANSWER = '';
+$CORRECT_NAME = '';
 $CORRECT_EMAIL = '';
 $CORRECT_SUBJECT = '';
 $CORRECT_MESSAGE = '';
 
 if (isset($_POST["rp_email"])) {
+  $CORRECT_NAME = htmlentities($_POST["rp_name"], ENT_COMPAT, "UTF-8");
   $CORRECT_SUBJECT = htmlentities($_POST["rp_subject"], ENT_COMPAT, "UTF-8");
   $CORRECT_MESSAGE = htmlentities($_POST["rp_message"], ENT_COMPAT, "UTF-8");
   // check anti-spam
@@ -95,12 +101,12 @@ if (isset($_POST["rp_email"])) {
 
   if ($myError == '') {
     $mySubject = $_POST["rp_subject"];
-    $myMessage = 'You received a message from '. $_POST["rp_email"] ."\n\n". $_POST["rp_message"];
+    $myMessage = 'You received a message from '. $_POST["rp_name"] .'('. $_POST["rp_email"] .")\n\n". $_POST["rp_message"];
 
     $mailSender = &JFactory::getMailer();
     $mailSender->addRecipient($recipient);
 
-    $mailSender->setSender(array($fromEmail,$fromName));
+    $mailSender->setSender(array($fromEmail, $fromName));
     $mailSender->addReplyTo(array( $_POST["rp_email"], '' ));
 
     $mailSender->setSubject($mySubject);
@@ -150,12 +156,14 @@ if ($enable_anti_spam) {
     print '<tr><td colspan="2">' . $myAntiSpamQuestion . '</td></tr><tr>'.$emptycell.'<td><input class="rapid_contact inputbox ' . $mod_class_suffix . '" type="text" name="rp_anti_spam_answer" size="' . $emailWidth . '" value="'.$CORRECT_ANTISPAM_ANSWER.'"/></td></tr>' . "\n";
   }
 }
+// print name input
+print '<tr><td><label for="rp_name">' . $myNameLabel . '</label>' . $separator . '<input class="rapid_contact inputbox ' . $mod_class_suffix . '" type="text" name="rp_name" id="rp_name" size="' . $nameWidth . '" value="'.$CORRECT_NAME.'"/></td></tr>' . "\n";
 // print email input
-print '<tr><td>' . $myEmailLabel . $separator . '<input class="rapid_contact inputbox ' . $mod_class_suffix . '" type="text" name="rp_email" size="' . $emailWidth . '" value="'.$CORRECT_EMAIL.'"/></td></tr>' . "\n";
+print '<tr><td><label for="rp_email">' . $myEmailLabel . '</label>' . $separator . '<input class="rapid_contact inputbox ' . $mod_class_suffix . '" type="text" name="rp_email" id="rp_email" size="' . $emailWidth . '" value="'.$CORRECT_EMAIL.'"/></td></tr>' . "\n";
 // print subject input
-print '<tr><td>' . $mySubjectLabel . $separator . '<input class="rapid_contact inputbox ' . $mod_class_suffix . '" type="text" name="rp_subject" size="' . $subjectWidth . '" value="'.$CORRECT_SUBJECT.'"/></td></tr>' . "\n";
+print '<tr><td><label for="rp_subject">' . $mySubjectLabel . '</label>' . $separator . '<input class="rapid_contact inputbox ' . $mod_class_suffix . '" type="text" name="rp_subject" id="rp_subject" size="' . $subjectWidth . '" value="'.$CORRECT_SUBJECT.'"/></td></tr>' . "\n";
 // print message input
-print '<tr><td valign="top">' . $myMessageLabel . $separator . '<textarea class="rapid_contact textarea ' . $mod_class_suffix . '" name="rp_message" cols="' . $messageWidth . '" rows="4">'.$CORRECT_MESSAGE.'</textarea></td></tr>' . "\n";
+print '<tr><td valign="top"><label for="rp_message">' . $myMessageLabel . '</label>' . $separator . '<textarea class="rapid_contact textarea ' . $mod_class_suffix . '" name="rp_message" id="rp_message" cols="' . $messageWidth . '" rows="4">'.$CORRECT_MESSAGE.'</textarea></td></tr>' . "\n";
 
 //print anti-spam
 if ($enable_anti_spam) {
@@ -164,5 +172,5 @@ if ($enable_anti_spam) {
   }
 }
 // print button
-print '<tr><td colspan="2"><input class="rapid_contact button ' . $mod_class_suffix . '" type="submit" value="' . $buttonText . '" style="width: ' . $buttonWidth . '%"/></td></tr></table></form></div>' . "\n";
+print '<tr><td></td><td><input class="rapid_contact button ' . $mod_class_suffix . '" type="submit" value="' . $buttonText . '" style="width: ' . $buttonWidth . '%"/></td></tr></table></form></div>' . "\n";
 return true;

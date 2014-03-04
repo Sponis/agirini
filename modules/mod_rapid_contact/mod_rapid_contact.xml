@@ -32,6 +32,11 @@
 
         <field name="spacer1" type="spacer" hr="true"/>
         <field name="spacert2" type="spacer" class="text" label="&lt;strong&gt;Text Parameters&lt;/strong&gt;"/>  
+        <field name="name_label"
+        type="text"
+        default="Full Name"
+        label="Name Label"
+        description="The label next to the name input." />     
         <field name="email_label"
         type="text"
         default="Email:"
@@ -62,11 +67,21 @@
         default="Your message could not be sent. Please try again."
         label="Error page text"
         description="The text displayed to the user when the message fails to be sent" />           
+        <field name="no_name"
+        type="text"
+        default="Please write your full name"
+        label="No Name Error Message"
+        description="The error message when the user does not write a name" />           
         <field name="no_email"
         type="text"
         default="Please write your email"
         label="No Email Error Message"
         description="The error message when the user does not write an email" />
+        <field name="invalid_name"
+        type="text"
+        default="Please write a valid name"
+        label="Invalid Name Error Message"
+        description="The error message when the user writes an invalid name" />
         <field name="invalid_email"
         type="text"
         default="Please write a valid email"
@@ -95,6 +110,11 @@
         default="#FF0000"
         label="Error Text Color"
         description="The color of the Error text." />          
+        <field name="name_width"
+        type="text"
+        default="15"
+        label="Name Width"
+        description="Width in letters of the name input" />   
         <field name="email_width"
         type="text"
         default="15"
