@@ -164,5 +164,5 @@ if ($enable_anti_spam) {
   }
 }
 // print button
-print '<tr><td><input class="rapid_contact button ' . $mod_class_suffix . '" type="submit" value="' . $buttonText . '" style="width: ' . $buttonWidth . '%"/></td><td></td></tr></table></form></div>' . "\n";
+print '<tr><td></td><td><input class="rapid_contact button ' . $mod_class_suffix . '" type="submit" value="' . $buttonText . '" style="width: ' . $buttonWidth . '%"/></td></tr></table></form></div>' . "\n";
 return true;
