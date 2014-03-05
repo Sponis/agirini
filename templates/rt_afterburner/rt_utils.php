@@ -7,7 +7,7 @@ jimport('joomla.filesystem.file');
 $headerjs = $this->getHeadData();
 reset($headerjs['scripts']);
 foreach ($headerjs['scripts'] as $script=>$type) {
-    if (($mootools_enabled == "false" and strpos($script,'mootools.js')) or ($caption_enabled == "false" and strpos($script,'caption.js'))) {
+    if (($mootools_enabled == "false" and strpos($script,'mootools-core.js')) or ($caption_enabled == "false" and strpos($script,'caption.js'))) {
         unset($headerjs['scripts'][$script]);
     }
 }

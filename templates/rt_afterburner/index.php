@@ -13,8 +13,8 @@ $leftcolumn_width		= $this->params->get("leftcolumnWidth", "210");
 $rightcolumn_width		= $this->params->get("rightcolumnWidth", "210");
 $leftcolumn_color		= $this->params->get("leftcolumnColor", "color2");
 $rightcolumn_color		= $this->params->get("rightcolumnColor", "color1");
-$mootools_enabled       = ($this->params->get("mootools_enabled", 1)  == 0)?"false":"true";
-$caption_enabled        = ($this->params->get("caption_enabled", 1)  == 0)?"false":"true";
+$mootools_enabled       = ($this->params->get("mootools_enabled", 0)  == 0)?"false":"true";
+$caption_enabled        = ($this->params->get("caption_enabled", 0)  == 0)?"false":"true";
 $rockettheme_logo       = ($this->params->get("rocketthemeLogo", 1)  == 0)?"false":"true";
 
 require(YOURBASEPATH . DS . "rt_styleloader.php");
@@ -28,9 +28,8 @@ require(YOURBASEPATH . DS . "rt_styleloader.php");
 <!--[if gt IE 9]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
 	<meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
-	
+  	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+
     <link rel="stylesheet" href="/templates/rt_afterburner/css/normalize.css" />	
 	<link rel="stylesheet" href="/templates/rt_afterburner/css/extra.css" />
 	<link rel="stylesheet" href="/templates/rt_afterburner/css/supersized.core.css" type="text/css" media="screen" />
@@ -44,9 +43,15 @@ require(YOURBASEPATH . DS . "rt_styleloader.php");
 	<![endif]-->
 
     <script src="/templates/rt_afterburner/js/modernizr-2.6.2.min.js"></script>
-	<script src="/templates/rt_afterburner/js/jquery-1.10.2.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" ></script>
+ 	<script type="text/javascript">
+ 	//<![CDATA[
+ 	(window.jQuery)||document.write('<script type="text/javascript" src="/templates/rt_afterburner/js/jquery-1.10.2.min.js"><\/script>');
+ 	////]]>
+ 	</script>
 	
 	<jdoc:include type="head" />
+
 	
 	<?php require(YOURBASEPATH . DS . "rt_utils.php"); ?> 
 </head>
@@ -56,9 +61,11 @@ require(YOURBASEPATH . DS . "rt_styleloader.php");
 			<header>
 			<div id="header">
 				<jdoc:include type="modules" name="top" style="afterburner" />		
-				<a href="<?php echo $this->baseurl ?>" title="<?php echo htmlspecialchars($this->getTitle(), ENT_COMPAT, 'UTF-8'); ?>" id="logo">
+				<h1>
+					<a href="<?php echo $this->baseurl ?>" title="<?php echo htmlspecialchars($this->getTitle(), ENT_COMPAT, 'UTF-8'); ?>" id="logo">
 					<span class="inv"><?php echo htmlspecialchars($this->getDescription(), ENT_COMPAT, 'UTF-8'); ?></span>
-				</a>
+					</a>
+				</h1>	
 			</div>
 			<div id="nav">
 				<jdoc:include type="modules" name="nav" style="none" />

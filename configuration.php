@@ -19,7 +19,7 @@ class JConfig {
 	public $dbprefix = 'gv1wu_';
 	public $live_site = '';
 	public $secret = 'gnHJgLjjxnWjBX9f';
-	public $gzip = '0';
+	public $gzip = '1';
 	public $error_reporting = 'default';
 	public $helpurl = 'http://help.joomla.org/proxy/index.php?option=com_help&keyref=Help{major}{minor}:{keyref}';
 	public $ftp_host = '127.0.0.1';
@@ -42,8 +42,8 @@ class JConfig {
 	public $caching = '0';
 	public $cache_handler = 'file';
 	public $cachetime = '15';
-	public $MetaDesc = '';
-	public $MetaKeys = '';
+	public $MetaDesc = 'Agia Irini Hotel';
+	public $MetaKeys = 'Agia Irini Hotel';
 	public $MetaTitle = '1';
 	public $MetaAuthor = '1';
 	public $MetaVersion = '0';

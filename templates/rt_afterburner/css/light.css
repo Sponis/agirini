@@ -3,7 +3,11 @@ table {border-collapse:collapse;border-spacing:0;}
 
 /* Main Layout */
 html {height:100%;margin-bottom:1px;}
-body {font:62.5%/1.2 "Helvetica Neue",Helvetica,Arial,sans-serif;}
+body {
+	font-size: 62.5%;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	line-height: 1.2;
+	}
 h1,h2,h3,h4,.componentheading,legend {margin:2em 0 1em;}
 h1,.componentheading {font-size:180%;}
 h3 {font-size:130%;}
