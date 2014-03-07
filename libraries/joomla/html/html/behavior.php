@@ -106,11 +106,11 @@ abstract class JHtmlBehavior
 		JHtml::_('script', 'system/caption.js', true, true);
 
 		// Attach caption to document
-		/*JFactory::getDocument()->addScriptDeclaration(
+		JFactory::getDocument()->addScriptDeclaration(
 			"window.addEvent('load', function() {
 				new JCaption('" . $selector . "');
 			});"
-		);*/
+		);
 
 		// Set static array
 		self::$loaded[__METHOD__][$selector] = true;
