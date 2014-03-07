@@ -94,6 +94,8 @@ abstract class JHtmlBehavior
 	 */
 	public static function caption($selector = 'img.caption')
 	{
+		return;
+		
 		// Only load once
 		if (isset(self::$loaded[__METHOD__][$selector]))
 		{
