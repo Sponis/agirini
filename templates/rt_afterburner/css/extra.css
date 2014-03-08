@@ -677,11 +677,39 @@ footer a {
 }
 
 
-/* media screen <600px test */
+/* always visible arrows on fancybox-nav*/
+.fancybox-nav span {
+	visibility: visible !important;
+}
+
+/* media queries*/
 
 @media only screen and (max-width: 600px) {
-	h2 {
-		color: #000;
-		background-color: #fff;
+	
+	header {
+		float: none;
+		position: relative;
+		left: auto;
+		top: auto;
+		width: 100%
+	}
+
+	#content {
+		height: auto;
+		margin: 0;
+		width: 100%;
+		max-width: none;
+	}
+
+	footer {
+		float: none;
+		position: relative;
+		right: auto;
+		bottom: auto;
+		width: 100%;
+	}
+
+	#nav ul {
+		width: 100%;
 	}
 }
