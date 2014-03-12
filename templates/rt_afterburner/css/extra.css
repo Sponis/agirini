@@ -4,24 +4,25 @@
 }
 
 #ggl-map {
-    width: 100%;
-    height: 100%;
-    margin-bottom: 20px;
-    padding: 0;
-    
+	width: 100%;
+	height: 100%;
+	margin-bottom: 20px;
+	padding: 0;
+
 }
 
 * { 
- -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
- -moz-box-sizing: border-box;    /* Firefox, other Gecko */
- box-sizing: border-box;         /* Opera/IE 8+ */
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
 }
 
 
 .inv {
-text-indent: -9999%;
-font-size: 1px;
-line-height: 1px;
+	text-indent: -9999%;
+	font-size: 1px;
+	line-height: 1px;
+	visibility: hidden;
 }
 
 #wrapper {
@@ -294,422 +295,449 @@ footer a {
  * may not operate correctly without them.
  */
 
-.jspContainer
-{
-	overflow: hidden;
-	position: relative;
-	width: 100%;
-}
-
-.jspPane
-{
-	position: absolute;
-	padding-bottom: 40px !important;
-	min-height: 100%;
-}
-
-.jspPane h3 {
-	display: inline-block;
-	background-color: #42a7d9;
-	color: #000;
-	padding: 2px;
-	margin-top: 16px;
-	margin-bottom: 6px;
-	line-height: 1.4;
-	min-width: 50%;
-	font-weight: bold;
-}
-
-.jspPane ul {
-	margin: 0 0 10px 0;
-	padding: 0;
-}
-
-.jspPane li {
-	list-style: none;
-}
-
-.jspPane li:before {
-	content: " - "
-}
-
-.jspPane p {
-	margin-top: 20px;
-}
-
-.jspVerticalBar
-{
-	position: absolute;
-	top: 0;
-	right: 0;
-	width: 16px;
-	background: rgb(11, 23, 33);
-}
-
-.jspHorizontalBar
-{
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	height: 16px;
-	background: red;
-}
-
-.jspCap
-{
-	display: none;
-}
-
-.jspHorizontalBar .jspCap
-{
-	float: left;
-}
-
-.jspTrack
-{	
-	position: relative;
-	height: 40px;
-}
-
-.jspDrag {
-	background-color: rgb(60, 156, 215);
-	position: relative;
-	top: 0;
-	left: 0;
-	cursor: pointer;
-}
-
-.jspHorizontalBar 
-.jspHorizontalBar 
-{
-	float: left;
-	height: 100%;
-}
-
-.jspArrow
-{
-	background: #50506d;
-	text-indent: -20000px;
-	display: block;
-	cursor: pointer;
-	padding: 0;
-	margin: 0;
-}
-
-.jspArrow.jspDisabled
-{
-	cursor: default;
-}
-
-.jspVerticalBar .jspArrow
-{
-	height: 16px;
-}
-
-.jspHorizontalBar .jspArrow
-{
-	width: 16px;
-	float: left;
-	height: 100%;
-}
-
-.jspVerticalBar .jspArrow:focus
-{
-	outline: none;
-}
-
-.jspCorner
-{
-	background: #eeeef4;
-	float: left;
-	height: 100%;
-}
-
-.jspArrowUp {
-	background-image: url(/templates/rt_afterburner/images/ArrowUp.png);
-	background-size: 100% 100%;
-	background-color: #3c9cd7;
-}
-
-.jspArrowDown {
-	background-image: url(/templates/rt_afterburner/images/ArrowDown.png);
-	background-size: 100% 100%;
-	background-color: #3c9cd7;
-}
-
-/* Yuk! CSS Hack for IE6 3 pixel bug :( */
-* html .jspCorner
-{
-	margin: 0 -3px 0 0;
-}
-
-.scroll-pane {
-    height: 100%;
-    overflow: auto;
-    width: 100%;
-}
-
-/*height 100% se ola ta divv*/
-
-#colmid {
-	height: 100%;
-}
-
-#colright {
-	height: 100%;
-}
-
-#col1wrap {
-	height: 100%;
-}
-
-#col1pad {
-	height: 100%;
-}
-
-#col1 {
-	height: 100%;
-}
-
-.component-pad {
-	height: 100%;
-}
-
-.item-page {
-	height: 100%;
-}
-
-
-.jlv-navigation {
-	display: none !important;
-}
-
-.jlv-gallery .jlv-content {
-	width: 100%;
-	position: relative;
-    border: none;
-}
-
-.jlv-gallery {
-	width: 100%;
-	position: relative;
-    border: none;
-    overflow: hidden;
-}
-
-.copyright {
-	display: none;
-}
-
-
-.jlv-gallery a {
-	display: block;
-	width: 31%;
-	margin: 3px 1%;
-	float: left;
-}
-
-.jlv-gallery a:hover {
-	opacity: 0.8 
-
-}
-
-.jlv-gallery img {
-	width: 100%;
-	border: none;
-	border-radius: 0;
-}
-
-
-.article-gallery {
-	width: 100%;
-	height: 30%;
-	}
-
-.articlepic {
-	width: 32%;
-	padding: 5px;
-}
-
-.articlepic2 {
-	width: 15%;
-	padding: 5px;
-}
-
-.welcome {
-	float: right;
-	margin-top: 20px;
-	margin-right: 20px;
-	text-align: right;
-}
-
-.line01 {
-	text-transform: uppercase;
-	font-size: 20.96px;
-	font-weight: normal;
-	float: right;
-	clear: both;
-}
-
-.line02 {
-	font-size: 14.4px;
-	font-weight: normal;
-	float: right;
-	clear: both;
-}
-
-.line03 {
-	font-size: 21.96px;
-	font-weight: normal;
-	letter-spacing: 2.5px;
-	float: right;
-	clear: both;
-}
-
-
-.social {
-	display: block;
-	width: 18px;
-	height: 18px;
-	background-image: url(/templates/rt_afterburner/images/fb_icon.png);
-	float: right;
-	clear: both;
-	margin-top: 5px;
-}
-
-
-.reqform2 {
-	background-color: #f58220;
-	width: 120px;
-	float: left;
-	clear: both;
-	
-}
-
-.reqform2 a {
-	display: block;
-	text-align: center;
-	text-decoration: none;
-	padding: 2px;
-	width: 100%;
-	height: 100%;
-}
-
-.reqform2 a:hover {
-	background-color: #dc751c;
-}
-
-.tel-fax {
-	float: left;
-	clear: both;
-}
-
-.item-info {
-	width: 32%;
-	padding: 2px;
-}
-
-.rightsidetext {
-	float: right;
-	text-align: left;
-	overflow: hidden;
-}
-
-.scroll-pane .custom {
-	position: relative;
-	width: 100%;
-	margin-top: 20px;
-	clear: both;
-
-}
-
- .customarticlefooter {
-	position: absolute;
-	bottom: 0px;
-	left: 0px;
-}
-
-.form table {
-	width: 100%
-}
-
-.form input {
-	width: 250px; max-width: 100%; height: 30px; padding: 0px 20px 0px 20px; margin: 0; 
-	background: #5E768D;
-}
-	
-
-.form textarea {
-	width: 250px; max-width: 100%; height: 120px; padding: 12px 20px; margin: 0; 
-	background: #5E768D;	
-	resize:none;
-}
-	
-
-.form input:focus, textarea:focus {
-	background: #c7d7db;
-}
-
-.form input[type=submit] {
-	width: 120px !important; height: 40px; float: left; padding: 10px 15px; margin-top: 20px;
-	-moz-box-shadow: 0px 0px 5px #999;-webkit-box-shadow: 0px 0px 5px #999;
-	border: 1px solid #556f8c;	
-	cursor: pointer;
-}
-
-.form input[type=submit]:hover {
-	background: #c7d7db;
-
-}
-
-.form label {
-	float: left; clear: left; width: 120px;
-	text-align: right;  color: #fff; 
-	cursor: pointer;
-	line-height: 30px;
-}
-
-
-
-.intro_text {
-	margin: 30px 0;
-}
-
-
-/* always visible arrows on fancybox-nav*/
-.fancybox-nav span {
-	visibility: visible !important;
-}
-
-/* media queries*/
-
-@media only screen and (max-width: 600px) {
-	
-	header {
-		float: none;
-		position: relative;
-		left: auto;
-		top: auto;
-		width: 100%
-	}
-
-	#content {
-		height: auto;
-		margin: 0;
-		width: 100%;
-		max-width: none;
-	}
-
-	footer {
-		float: none;
-		position: relative;
-		right: auto;
-		bottom: auto;
-		width: 100%;
-	}
-
-	#nav ul {
-		width: 100%;
-	}
-}
+ .jspContainer
+ {
+ 	overflow: hidden;
+ 	position: relative;
+ 	width: 100%;
+ }
+
+ .jspPane
+ {
+ 	position: absolute;
+ 	padding-bottom: 40px !important;
+ 	min-height: 100%;
+ }
+
+ .jspPane h3 {
+ 	display: inline-block;
+ 	background-color: #42a7d9;
+ 	color: #000;
+ 	padding: 2px;
+ 	margin-top: 16px;
+ 	margin-bottom: 6px;
+ 	line-height: 1.4;
+ 	min-width: 50%;
+ 	font-weight: bold;
+ }
+
+ .jspPane ul {
+ 	margin: 0 0 10px 0;
+ 	padding: 0;
+ }
+
+ .jspPane li {
+ 	list-style: none;
+ }
+
+ .jspPane li:before {
+ 	content: " - "
+ }
+
+ .jspPane p {
+ 	margin-top: 20px;
+ }
+
+ .jspVerticalBar
+ {
+ 	position: absolute;
+ 	top: 0;
+ 	right: 0;
+ 	width: 16px;
+ 	background: rgb(11, 23, 33);
+ }
+
+ .jspHorizontalBar
+ {
+ 	position: absolute;
+ 	bottom: 0;
+ 	left: 0;
+ 	width: 100%;
+ 	height: 16px;
+ 	background: red;
+ }
+
+ .jspCap
+ {
+ 	display: none;
+ }
+
+ .jspHorizontalBar .jspCap
+ {
+ 	float: left;
+ }
+
+ .jspTrack
+ {	
+ 	position: relative;
+ 	height: 40px;
+ }
+
+ .jspDrag {
+ 	background-color: rgb(60, 156, 215);
+ 	position: relative;
+ 	top: 0;
+ 	left: 0;
+ 	cursor: pointer;
+ }
+
+ .jspHorizontalBar 
+ .jspHorizontalBar 
+ {
+ 	float: left;
+ 	height: 100%;
+ }
+
+ .jspArrow
+ {
+ 	background: #50506d;
+ 	text-indent: -20000px;
+ 	display: block;
+ 	cursor: pointer;
+ 	padding: 0;
+ 	margin: 0;
+ }
+
+ .jspArrow.jspDisabled
+ {
+ 	cursor: default;
+ }
+
+ .jspVerticalBar .jspArrow
+ {
+ 	height: 16px;
+ }
+
+ .jspHorizontalBar .jspArrow
+ {
+ 	width: 16px;
+ 	float: left;
+ 	height: 100%;
+ }
+
+ .jspVerticalBar .jspArrow:focus
+ {
+ 	outline: none;
+ }
+
+ .jspCorner
+ {
+ 	background: #eeeef4;
+ 	float: left;
+ 	height: 100%;
+ }
+
+ .jspArrowUp {
+ 	background-image: url(/templates/rt_afterburner/images/ArrowUp.png);
+ 	background-size: 100% 100%;
+ 	background-color: #3c9cd7;
+ }
+
+ .jspArrowDown {
+ 	background-image: url(/templates/rt_afterburner/images/ArrowDown.png);
+ 	background-size: 100% 100%;
+ 	background-color: #3c9cd7;
+ }
+
+ /* Yuk! CSS Hack for IE6 3 pixel bug :( */
+ 	* html .jspCorner
+ 	{
+ 		margin: 0 -3px 0 0;
+ 	}
+
+ 	.scroll-pane {
+ 		height: 100%;
+ 		overflow: auto;
+ 		width: 100%;
+ 	}
+
+ 	/*height 100% se ola ta divv*/
+
+ 	#colmid {
+ 		height: 100%;
+ 	}
+
+ 	#colright {
+ 		height: 100%;
+ 	}
+
+ 	#col1wrap {
+ 		height: 100%;
+ 	}
+
+ 	#col1pad {
+ 		height: 100%;
+ 	}
+
+ 	#col1 {
+ 		height: 100%;
+ 	}
+
+ 	.component-pad {
+ 		height: 100%;
+ 	}
+
+ 	.item-page {
+ 		height: 100%;
+ 	}
+
+
+ 	.jlv-navigation {
+ 		display: none !important;
+ 	}
+
+ 	.jlv-gallery .jlv-content {
+ 		width: 100%;
+ 		position: relative;
+ 		border: none;
+ 	}
+
+ 	.jlv-gallery {
+ 		width: 100%;
+ 		position: relative;
+ 		border: none;
+ 		overflow: hidden;
+ 	}
+
+ 	.copyright {
+ 		display: none;
+ 	}
+
+
+ 	.jlv-gallery a {
+ 		display: block;
+ 		width: 31%;
+ 		margin: 3px 1%;
+ 		float: left;
+ 	}
+
+ 	.jlv-gallery a:hover {
+ 		opacity: 0.8 
+
+ 	}
+
+ 	.jlv-gallery img {
+ 		width: 100%;
+ 		border: none;
+ 		border-radius: 0;
+ 	}
+
+
+ 	.article-gallery {
+ 		width: 100%;
+ 		height: 30%;
+ 	}
+
+ 	.articlepic {
+ 		width: 32%;
+ 		padding: 5px;
+ 	}
+
+ 	.articlepic2 {
+ 		width: 15%;
+ 		padding: 5px;
+ 	}
+
+ 	.welcome {
+ 		float: right;
+ 		margin-top: 20px;
+ 		margin-right: 20px;
+ 		text-align: right;
+ 	}
+
+ 	.line01 {
+ 		text-transform: uppercase;
+ 		font-size: 20.96px;
+ 		font-weight: normal;
+ 		float: right;
+ 		clear: both;
+ 	}
+
+ 	.line02 {
+ 		font-size: 14.4px;
+ 		font-weight: normal;
+ 		float: right;
+ 		clear: both;
+ 	}
+
+ 	.line03 {
+ 		font-size: 21.96px;
+ 		font-weight: normal;
+ 		letter-spacing: 2.5px;
+ 		float: right;
+ 		clear: both;
+ 	}
+
+
+ 	.social {
+ 		display: block;
+ 		width: 18px;
+ 		height: 18px;
+ 		background-image: url(/templates/rt_afterburner/images/fb_icon.png);
+ 		float: right;
+ 		clear: both;
+ 		margin-top: 5px;
+ 	}
+
+
+ 	.reqform2 {
+ 		background-color: #f58220;
+ 		width: 120px;
+ 		float: left;
+ 		clear: both;
+
+ 	}
+
+ 	.reqform2 a {
+ 		display: block;
+ 		text-align: center;
+ 		text-decoration: none;
+ 		padding: 2px;
+ 		width: 100%;
+ 		height: 100%;
+ 	}
+
+ 	.reqform2 a:hover {
+ 		background-color: #dc751c;
+ 	}
+
+ 	.tel-fax {
+ 		float: left;
+ 		clear: both;
+ 	}
+
+ 	.item-info {
+ 		width: 32%;
+ 		padding: 2px;
+ 	}
+
+ 	.rightsidetext {
+ 		float: right;
+ 		text-align: left;
+ 		overflow: hidden;
+ 	}
+
+ 	.scroll-pane .custom {
+ 		position: relative;
+ 		width: 100%;
+ 		margin-top: 20px;
+ 		clear: both;
+
+ 	}
+
+ 	.customarticlefooter {
+ 		position: absolute;
+ 		overflow: hidden;
+ 		bottom: 18px;
+ 		left: 0px;
+ 	}
+
+ 	.form table {
+ 		width: 100%
+ 	}
+
+ 	.form input {
+ 		width: 250px; max-width: 100%; height: 30px; padding: 0px 20px 0px 20px; margin: 0; 
+ 		background: #5E768D;
+ 	}
+
+
+ 	.form textarea {
+ 		width: 250px; max-width: 100%; height: 120px; padding: 12px 20px; margin: 0; 
+ 		background: #5E768D;	
+ 		resize:none;
+ 	}
+
+
+ 	.form input:focus, textarea:focus {
+ 		background: #c7d7db;
+ 	}
+
+ 	.form input[type=submit] {
+ 		width: 120px !important; height: 40px; float: left; padding: 10px 15px; margin-top: 20px;
+ 		-moz-box-shadow: 0px 0px 5px #999;-webkit-box-shadow: 0px 0px 5px #999;
+ 		border: 1px solid #556f8c;	
+ 		cursor: pointer;
+ 	}
+
+ 	.form input[type=submit]:hover {
+ 		background: #c7d7db;
+
+ 	}
+
+ 	.form label {
+ 		float: left; clear: left; width: 120px;
+ 		text-align: right;  color: #fff; 
+ 		cursor: pointer;
+ 		line-height: 30px;
+ 	}
+
+
+
+ 	.intro_text {
+ 		margin: 30px 0;
+ 	}
+
+
+ 	/* always visible arrows on fancybox-nav*/
+ 	.fancybox-nav span {
+ 		visibility: visible !important;
+ 	}
+
+ 	/* media queries*/
+
+ 	@media only screen and (max-width: 640px) {
+
+ 		header {
+ 			float: none;
+ 			position: relative;
+ 			left: auto;
+ 			top: auto;
+ 			width: 100%
+ 		}
+
+ 		#content {
+ 			height: auto;
+ 			margin: 0;
+ 			width: 100%;
+ 			max-width: none;
+ 		}
+
+ 		footer {
+ 			float: none;
+ 			position: absolute
+ 			right: 0;
+ 			padding-right: 0;
+ 			bottom: auto;
+ 			width: auto;
+ 		}
+
+ 		#logo {
+ 			margin-left: 0;
+ 			margin-right: 0;
+ 		}
+
+
+ 		#nav ul {
+ 			width: 100%;
+ 			margin: 0;
+ 		}
+
+ 		#nav ul li {
+ 			margin-bottom: 1px;
+ 		}
+
+ 		body, #main, #wrapper, #content, #main-content, #colmask, #colmid, #colright, #col1wrap, #col1pad, #col1, .component-pad, .item-page .content-toggler, .scroll-pane, .blog  {
+ 			height: auto;
+ 		}
+
+ 		.scroll-pane {
+ 			overflow: hidden;
+ 		}
+
+ 		#wrapper {
+ 			min-width: 320px;
+ 			padding: 0 10px;
+ 		}
+ 		
+ 	}

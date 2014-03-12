@@ -1,5 +1,9 @@
 jQuery(document).ready(function() {
 
+	var sitewidth = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+
+	if (sitewidth > 640) { 
+
 	//jscroll panel - mousewheel scroller
 	
 	if (jQuery('.scroll-pane').length > 0) {
@@ -49,6 +53,7 @@ jQuery(document).ready(function() {
 		// Toggle active classname on the trigger element
 		jQuery(this).toggleClass('toggle-trigger-open');
 	});
+}
 
 
 	if (jQuery('#ggl-map').length > 0) {
