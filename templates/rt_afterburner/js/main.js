@@ -9,7 +9,7 @@ jQuery(document).ready(function() {
 	if (jQuery('.scroll-pane').length > 0) {
 		
 		jQuery('.scroll-pane').jScrollPane({
-				showArrows: true
+			showArrows: true
 		});
 	}
 
@@ -56,7 +56,7 @@ jQuery(document).ready(function() {
 }
 
 
-	if (jQuery('#ggl-map').length > 0) {
+if (jQuery('#ggl-map').length > 0) {
 		// Google map api
 		
 		function initialize() {
@@ -66,16 +66,24 @@ jQuery(document).ready(function() {
 			var mapOptions = {
 				zoom: 11,
 				center: myLatlng
+			};
+			if (sitewidth =< 640) {
+				mapOptions = {
+					zoom: 12,
+					center: myLatlng
+				}
 			}
-			
-			var map = new google.maps.Map(document.getElementById('ggl-map'), mapOptions);
-			//	marker;
-			 var marker = new google.maps.Marker({
-     		 position: myLatlng,
-     		 map: map,
-     		 title: 'Agia Irini'
+		}
+	}
 
-		});
+	var map = new google.maps.Map(document.getElementById('ggl-map'), mapOptions);
+			//	marker;
+			var marker = new google.maps.Marker({
+				position: myLatlng,
+				map: map,
+				title: 'Agia Irini'
+
+			});
 		}
 
 		google.maps.event.addDomListener(window, 'load', initialize);
