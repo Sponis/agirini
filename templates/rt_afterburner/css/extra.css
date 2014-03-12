@@ -745,7 +745,7 @@ footer a {
  			height: 180px;
  		}
 
- 		.moduletabelcontact {
+ 		.moduletablecontact, .contact {
  			width: 100%;
  		}
  	}
