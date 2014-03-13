@@ -684,6 +684,18 @@ footer a {
  		visibility: visible !important;
  	}
 
+ 	/*createdby*/
+ 	.createdby {
+ 		display: block;
+ 		line-height: 12px;
+ 		width: 200px;
+ 		position: absolute;
+ 		bottom: 0;
+ 		right: 0;
+
+ 	}
+
+
  	/* media queries*/
 
  	@media only screen and (max-width: 640px) {
@@ -713,8 +725,11 @@ footer a {
  		}
 
  		#logo {
+ 			background-image: url(/templates/rt_afterburner/images/logo-mob.png);
  			margin-left: 0;
  			margin-right: 0;
+ 			height: 157px;
+ 			width: 141px;
  		}
 
 
@@ -747,5 +762,52 @@ footer a {
 
  		.moduletablecontact, .contact {
  			width: 100%;
+ 		}
+
+ 		.form input {
+ 			width: 100%;
+ 			padding: 0 6px;
+ 		}
+
+ 		.form textarea {
+ 			width: 100%;
+ 			padding: 6px 6px;
+ 		}
+
+ 		.toggle-trigger, .toggle-trigger-open {
+ 			background-image: none;
+ 		}
+
+ 		.scroll-pane .contact ul {
+ 			margin: 5px 0; 
+ 		}
+
+ 		.scroll-pane .contact li {
+ 			list-style: none;
+ 		}
+
+ 		.scroll-pane .contact li:before {
+ 			content: " "
+ 		}
+
+ 		.scroll-pane .contact a {
+ 			color: #42A7D9 !important;
+ 			margin: 10px 0;
+ 		} 
+
+ 		.scroll-pane .contact a:hover {
+ 			color: #7ac1e4 !important;
+ 		}
+
+ 		.scroll-pane .contact p{
+ 			margin-top: 0;
+ 		}
+
+ 		.scroll-pane .contact span {
+ 			padding-left: 40px;
+ 		}
+
+ 		.scroll-pane .contact {
+ 			margin-top: 10px;
  		}
  	}

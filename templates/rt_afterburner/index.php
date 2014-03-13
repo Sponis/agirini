@@ -58,6 +58,7 @@ require(YOURBASEPATH . DS . "rt_styleloader.php");
 <body>
 	<div id="main">
 		<div id="wrapper" class="foreground">
+			<jdoc:include type="modules" name="bottom" style="none" />
 			<header>
 			<div id="header">
 				<jdoc:include type="modules" name="top" style="afterburner" />		
@@ -142,7 +143,7 @@ require(YOURBASEPATH . DS . "rt_styleloader.php");
 <?php if ($this->countModules('bottom')) : ?>
 	<div id="footer">
 		<div class="footer-pad">
-			<jdoc:include type="modules" name="bottom" style="none" />
+			
 		</div>
 	</div>
 <?php endif; ?>
