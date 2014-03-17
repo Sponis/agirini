@@ -30,6 +30,8 @@ require(YOURBASEPATH . DS . "rt_styleloader.php");
 	<meta charset="utf-8">
   	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
 
+  	<?php $this->setGenerator(null); ?>
+
     <link rel="stylesheet" href="/templates/rt_afterburner/css/normalize.css" />	
 	<link rel="stylesheet" href="/templates/rt_afterburner/css/extra.css" />
 	<link rel="stylesheet" href="/templates/rt_afterburner/css/supersized.core.css" type="text/css" media="screen" />
@@ -58,7 +60,6 @@ require(YOURBASEPATH . DS . "rt_styleloader.php");
 <body>
 	<div id="main">
 		<div id="wrapper" class="foreground">
-			<jdoc:include type="modules" name="bottom" style="none" />
 			<header>
 			<div id="header">
 				<jdoc:include type="modules" name="top" style="afterburner" />		
@@ -155,6 +156,7 @@ require(YOURBASEPATH . DS . "rt_styleloader.php");
 </div>
 </div>-->
 </footer>
+<jdoc:include type="modules" name="bottom" style="none" />
 </div>
 </div>
 <script src="/templates/rt_afterburner/js/supersized.core.3.2.1.min.js"></script>
