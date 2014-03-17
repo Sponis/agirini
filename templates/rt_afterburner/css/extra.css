@@ -696,6 +696,21 @@ footer a {
  		line-height: 30px;
  	}
 
+ 	.items-row h2 {
+ 		display: inline-block;
+ 		background-color: #42a7d9;
+ 		padding: 2px;
+ 		margin-top: 16px;
+ 		margin-bottom: 6px;
+ 		line-height: 1.4;
+ 		min-width: auto;
+ 		font-weight: bold;
+ 	}
+
+ 	.items-row a {
+ 		color: #000 !important;
+ 		width: 100%;
+ 	}
 
 
  	.intro_text {
@@ -716,6 +731,15 @@ footer a {
  		position: absolute;
  		bottom: 5px;
  		right: 0;
+ 		text-shadow:1px 1px 0 #fff,
+					-1px -1px 0 #fff,
+					1px -1px 0 #fff,
+					-1px 1px 0 #fff,
+					0px 1px 0 #fff,
+					1px 0px 0 #fff,
+					0px -1px 0 #fff,
+					-1px 0px 0 #fff,
+					4px 4px 3px #000;
  	}
 
  	.createdby a{
